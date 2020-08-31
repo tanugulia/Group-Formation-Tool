@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="favicon.ico"/>
+    <title>Enroll TA</title>
+    <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container" style="padding:20px;">
+    <form autocomplete="off" action="#"
+          th:action="@{/enrollTA?courseId={courseId} (courseId=${courseId})}"
+          method="post" class="m-t col-md-4 col-md-offset-4" role="form"
+          th:object="${user}" data-toggle="validator">
+        <div th:if="${error}" class="validation-message alert alert-danger"
+             role="alert">TA not added!!
+        </div>
+        <div th:if="${success}" class="validation-message alert text-success"
+             role="alert">TA added successfully!!
+        </div>
+        <br>
+        <h4>Enter details to add TA!</h4>
+        <div class="form-group input-group has-feedback">
+            <input type="email" name="username" th:field="*{emailId}"
+                   placeholder="Add by Email Address" class="form-control" required/>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-sm btn-block"
+                    style="width: 120px; margin-left: 40px;">Add TA
+            </button>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <h3 class="text-center">Enrolled TA(s)</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">BannerID</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="ta : ${taList}">
+                <td th:text="${ta.firstName}"></td>
+                <td th:text="${ta.lastName}"></td>
+                <td th:text="${ta.emailId}"></td>
+                <td th:text="${ta.bannerId}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+    <div>
+        <a th:href="@{/courseList}" class="text-primary">Go back to
+            course page!</a>
+    </div>
+</div>
+</body>
+</html>

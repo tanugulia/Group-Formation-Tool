@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div sec:authorize="!isAuthenticated()">
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+    <div sec:authorize="isAuthenticated()">
+        <h3 class="text-center">Courses</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Course Id</th>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Course Details</th>
+                    <th scope="col">Course Credits</th>
+                    <th scope="col">Course Students</th>
+                    <th scope="col">Course TAs</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="course : ${courses}">
+                    <td th:text="${course.id}"></td>
+                    <td><a th:href="@{/instructorCourseDetails(courseName=${course.name},courseId=${course.id})}"
+                           th:text="${course.name}">
+                    </a></td>
+                    <td th:text="${course.description}"></td>
+                    <td th:text="${course.credits}"></td>
+
+                    <td><a
+                            th:href="@{/uploadCSVFile?courseId={courseId} (courseId=${course.id})}"><span
+                            class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp; Enroll
+                        Students</a></td>
+                    <td><a
+                            th:href="@{/enrollTA?courseId={courseId} (courseId=${course.id})}"><span
+                            class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Add TA</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br/>
+        <div class="text-center">
+            <a class="btn btn-primary btn-md"
+               th:href="@{/questionManager/questionManager}"> <span
+                    class="glyphicon glyphicon-book"></span>&nbsp;&nbsp; View your
+                questions
+            </a>
+        </div>
+
+        <br/> <br/>
+        <form class="text-center" method="post" th:action="@{/logout}">
+            <button class="btn btn-danger btn-sm" type="submit">Sign
+                Out
+            </button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

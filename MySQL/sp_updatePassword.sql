@@ -1,0 +1,11 @@
+DELIMITER $$
+CREATE PROCEDURE `sp_updatePassword`(
+IN emailID VARCHAR(255),
+IN pswd VARCHAR(255)
+)
+BEGIN
+	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+	UPDATE users set password = pswd where email = emailID;
+	COMMIT;
+END$$
+DELIMITER ;

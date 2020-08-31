@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Question.QuestionManagerControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:28" hostname="Prabhjots-MacBook-Pro.local" time="0.037">
+  <properties/>
+  <testcase name="saveQuestionTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionManagerControllerTest" time="0.024"/>
+  <testcase name="deleteQuestionTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionManagerControllerTest" time="0.009"/>
+  <testcase name="createQuestionTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionManagerControllerTest" time="0.004"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.7.RELEASE)
+
+2020-07-16 13:40:27.821  INFO 41246 --- [    Test worker] C.G.Q.QuestionManagerControllerTest      : Starting QuestionManagerControllerTest on Prabhjots-MacBook-Pro.local with PID 41246 (started by prabhjotkaur in /Users/prabhjotkaur/git/group22)
+2020-07-16 13:40:27.822  INFO 41246 --- [    Test worker] C.G.Q.QuestionManagerControllerTest      : No active profile set, falling back to default profiles: default
+2020-07-16 13:40:28.143  INFO 41246 --- [    Test worker] C.G.Q.QuestionManagerControllerTest      : Started QuestionManagerControllerTest in 0.331 seconds (JVM running for 7.879)
+2020-07-16 13:40:28.148  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Saving the question created by the instructor to the database
+2020-07-16 13:40:28.149  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:28.149  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:28.149  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the options for question if applicable (Multiple Choice only)
+2020-07-16 13:40:28.149  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the createQuestion repository function to save the question to Database
+2020-07-16 13:40:28.149  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Question is saved to the database and the instructor views the saved question
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /questionManager/createQuestion
+       Parameters = {questionTitle=[Sample title], questionText=[Sample text], questionType=[1], optionText=[], optionValue=[], _csrf=[82212a61-d553-4e18-af49-c41657a9ff19]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionManagerController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionManagerController#saveQuestion(Model, String, String, String, List, List)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = redirect:/questionManager/viewQuestion?questionId=5
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 302
+    Error message = null
+          Headers = [Content-Language:"en", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY", Location:"/questionManager/viewQuestion?questionId=5"]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = /questionManager/viewQuestion?questionId=5
+          Cookies = []
+2020-07-16 13:40:28.151  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Saving the question created by the instructor to the database
+2020-07-16 13:40:28.152  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:28.152  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:28.152  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : One or more input fields have invalid/empty data
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /questionManager/createQuestion
+       Parameters = {questionTitle=[], questionText=[Sample text], questionType=[1], optionText=[], optionValue=[], _csrf=[b734d306-0e42-4fc9-bd5e-491bb60c5ffb]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionManagerController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionManagerController#saveQuestion(Model, String, String, String, List, List)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/createQuestion
+             View = null
+        Attribute = invalidData
+            value = One or more fields have invalid/empty data! Please enter and try again
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Create Question</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+    <style>
+	hr {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		border-top: 3px solid #2e6da4;
+	}
+	textarea {
+		resize: vertical;
+	}
+
+    </style>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container" style="padding: 10px;">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+
+</body>
+<script>
+	document
+			.getElementById('questionType')
+			.addEventListener(
+					'change',
+					function(e) {
+						if (this.value == 2 || this.value == 3) {
+							document.getElementById("choices").style.display = "block";
+							document.getElementById("addMoreBtn").style.display = "block";
+						} else {
+							document.getElementById("choices").style.display = "none";
+							document.getElementById("addMoreBtn").style.display = "none";
+							document.getElementById("addedChoices").innerHTML = '';
+							document.getElementById("addedChoices").style.display = "none";
+						}
+					});
+
+	function showMoreOptions() {
+		document.getElementById("addedChoices").style.display = "block";
+		document.getElementById("addedChoices").innerHTML += "<br /><div class='row' style='margin-left: -30px'>"
+				+ "<div class='col-xs-6' style='width: 35%;'><label for='questionTitle'>Enter the option displayed as"
+				+ " here</label> <input type='text' name='optionText'"
+				+ "placeholder='Option display text' class='form-control'/>"
+				+ "<span class='glyphicon form-control-feedback' aria-hidden='true'></span></div>"
+				+ "<div class='col-xs-6' style='width: 35%;'><label for='questionTitle'>Enter the option stored as"
+				+ " here</label> <input type='text' name='optionValue'"
+				+ "placeholder='Option stored as value' class='form-control'"
+				+ " /> <span class='glyphicon form-control-feedback'"
+				+ "aria-hidden='true'></span></div></div>";
+	}
+
+</script>
+</html>
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:28.171  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Deleting the question created by the instructor from the database
+2020-07-16 13:40:28.171  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the deleteQuestion repository function to delete the question1from the Database
+2020-07-16 13:40:28.171  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : The Question 1 is successfully deleted!
+2020-07-16 13:40:28.171  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Redirecting to the instructor's question list page
+2020-07-16 13:40:28.171  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getQuestionListForInstructor repository function to fetch the question bank from the Database by email id anonymousUser
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/deleteQuestion
+       Parameters = {questionId=[1]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@3f4a7d92}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionManagerController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionManagerController#deleteQuestion(long, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/questionManager
+             View = null
+        Attribute = successMessage
+            value = The question 1 is successfully deleted!
+        Attribute = questionList
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Question Manager</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:28.175  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Deleting the question created by the instructor from the database
+2020-07-16 13:40:28.175  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the deleteQuestion repository function to delete the question1from the Database
+2020-07-16 13:40:28.175  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : The question could not be deleted
+2020-07-16 13:40:28.175  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Redirecting to the instructor's question list page
+2020-07-16 13:40:28.175  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getQuestionListForInstructor repository function to fetch the question bank from the Database by email id anonymousUser
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/deleteQuestion
+       Parameters = {questionId=[1]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@24a646c2}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionManagerController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionManagerController#deleteQuestion(long, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/questionManager
+             View = null
+        Attribute = failureMessage
+            value = The question can not not be deleted.
+        Attribute = questionList
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Question Manager</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/createQuestion
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@3fe3c381}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionManagerController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionManagerController#createQuestion(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/createQuestion
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Create Question</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+    <style>
+	hr {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		border-top: 3px solid #2e6da4;
+	}
+	textarea {
+		resize: vertical;
+	}
+
+    </style>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container" style="padding: 10px;">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+
+</body>
+<script>
+	document
+			.getElementById('questionType')
+			.addEventListener(
+					'change',
+					function(e) {
+						if (this.value == 2 || this.value == 3) {
+							document.getElementById("choices").style.display = "block";
+							document.getElementById("addMoreBtn").style.display = "block";
+						} else {
+							document.getElementById("choices").style.display = "none";
+							document.getElementById("addMoreBtn").style.display = "none";
+							document.getElementById("addedChoices").innerHTML = '';
+							document.getElementById("addedChoices").style.display = "none";
+						}
+					});
+
+	function showMoreOptions() {
+		document.getElementById("addedChoices").style.display = "block";
+		document.getElementById("addedChoices").innerHTML += "<br /><div class='row' style='margin-left: -30px'>"
+				+ "<div class='col-xs-6' style='width: 35%;'><label for='questionTitle'>Enter the option displayed as"
+				+ " here</label> <input type='text' name='optionText'"
+				+ "placeholder='Option display text' class='form-control'/>"
+				+ "<span class='glyphicon form-control-feedback' aria-hidden='true'></span></div>"
+				+ "<div class='col-xs-6' style='width: 35%;'><label for='questionTitle'>Enter the option stored as"
+				+ " here</label> <input type='text' name='optionValue'"
+				+ "placeholder='Option stored as value' class='form-control'"
+				+ " /> <span class='glyphicon form-control-feedback'"
+				+ "aria-hidden='true'></span></div></div>";
+	}
+
+</script>
+</html>
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

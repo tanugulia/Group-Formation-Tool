@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Assign Instructor to course</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div sec:authorize="!isAuthenticated()">
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+
+        <h3 class="text-center"
+            th:text="'Choose a user from the list of users to assign as the instructor for ' + ${course.name} + ':'">
+            Choose from these users to assign as the instructor:</h3>
+        <br/>
+        <form data-toggle="validator"
+              method="post" role="form" th:action="@{/admin/assignInstructor(id=${course.id})}">
+            <div class="table-responsive"
+                 style="position: relative; height: 200px; overflow: auto; display: block;">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">User Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="form-check" th:each="user : ${users}">
+                        <td><input class="form-check-input" name="instructor"
+                                   th:value="${user.id}" type="radio"><label
+                                class="form-check-label"
+                                th:text="'&nbsp;&nbsp;' + ${user.firstName} + ' ' + ${user.lastName}"></label></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Assign
+                Instructor
+            </button>
+            <br/> <a class="btn btn-danger btn-sm btn-block"
+                     th:href="@{/courseList}">Cancel</a>
+        </form>
+
+        <div th:if="${instructorList !=null and !instructorList.empty} ">
+            <h3 class="text-center"
+                th:text="'The currently assigned instructors for ' + ${course.name} + ' are'">
+            </h3>
+            <br/>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email Id</th>
+                        <th scope="col">Banner Id</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="instructor : ${instructorList}">
+                        <td th:text="${instructor.firstName}"></td>
+                        <td th:text="${instructor.lastName}"></td>
+                        <td th:text="${instructor.emailId}"></td>
+                        <td th:text="${instructor.bannerId}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br/>
+            <form class="text-center" method="post" th:action="@{/logout}">
+                <button class="btn btn-danger btn-sm" type="submit">
+                    Sign Out
+                </button>
+            </form>
+            <br/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

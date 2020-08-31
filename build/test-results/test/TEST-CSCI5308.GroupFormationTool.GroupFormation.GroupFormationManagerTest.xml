@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.GroupFormation.GroupFormationManagerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:28" hostname="Prabhjots-MacBook-Pro.local" time="0.019">
+  <properties/>
+  <testcase name="insertGroupsToCourse()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormationManagerTest" time="0.011"/>
+  <testcase name="formGroupsTest()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormationManagerTest" time="0.006"/>
+  <testcase name="deleteGroupsForCourse()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormationManagerTest" time="0.001"/>
+  <testcase name="getGroupsForCourseTest()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormationManagerTest" time="0.001"/>
+  <system-out><![CDATA[2020-07-16 13:40:28.566  INFO 41246 --- [    Test worker] C.G.G.GroupFormationManager              : Inserting into the groups for the course from the repository
+2020-07-16 13:40:28.566  INFO 41246 --- [    Test worker] C.G.G.GroupFormationManager              : Inserting into the groups for the course from the repository
+2020-07-16 13:40:28.567  INFO 41246 --- [    Test worker] C.G.G.GroupFormationManager              : Fetching the survey questions
+2020-07-16 13:40:28.568  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the survey questions for a course CSCI 6509
+2020-07-16 13:40:28.568  INFO 41246 --- [    Test worker] C.G.G.GroupFormationManager              : Fetching the list of students who took the survey
+2020-07-16 13:40:28.568  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the users who took the questions for a course survey by course id CSCI 6509
+2020-07-16 13:40:28.568  INFO 41246 --- [    Test worker] C.G.G.GroupFormationManager              : Fetching the group formation logic to form groups
+2020-07-16 13:40:28.568  INFO 41246 --- [    Test worker] C.G.G.GroupFormationManager              : Fetching all the student responses for the survey
+2020-07-16 13:40:28.568  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the responses of all users who took the course survey for course id CSCI 6509
+2020-07-16 13:40:28.574  INFO 41246 --- [    Test worker] C.G.G.GroupFormationManager              : Deleting the groups for the course from the repository
+2020-07-16 13:40:28.574  INFO 41246 --- [    Test worker] C.G.G.GroupFormationManager              : Fetching the groups for the course from the repository
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

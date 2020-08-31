@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:28" hostname="Prabhjots-MacBook-Pro.local" time="0.003">
+  <properties/>
+  <testcase name="setMatchWords()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.0"/>
+  <testcase name="getLesserThan()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.0"/>
+  <testcase name="getGroupSize()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.001"/>
+  <testcase name="setGreaterThan()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.0"/>
+  <testcase name="setLesserThan()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.0"/>
+  <testcase name="setGroupSize()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.0"/>
+  <testcase name="getGreaterThan()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.001"/>
+  <testcase name="getQuestionId()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.0"/>
+  <testcase name="getSimilarity()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.0"/>
+  <testcase name="setQuestionId()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.0"/>
+  <testcase name="setSimilarity()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.0"/>
+  <testcase name="getMatchWords()" classname="CSCI5308.GroupFormationTool.GroupFormation.GroupFormulaTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

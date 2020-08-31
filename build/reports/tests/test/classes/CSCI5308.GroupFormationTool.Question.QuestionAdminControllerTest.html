@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - QuestionAdminControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>QuestionAdminControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/CSCI5308.GroupFormationTool.Question.html">CSCI5308.GroupFormationTool.Question</a> &gt; QuestionAdminControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.029s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">questionListTest()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">sortQuestionTest()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">viewQuestionTest()</td>
+<td class="success">0.020s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.7.RELEASE)
+
+2020-07-16 13:40:28.196  INFO 41246 --- [    Test worker] C.G.Q.QuestionAdminControllerTest        : Starting QuestionAdminControllerTest on Prabhjots-MacBook-Pro.local with PID 41246 (started by prabhjotkaur in /Users/prabhjotkaur/git/group22)
+2020-07-16 13:40:28.196  INFO 41246 --- [    Test worker] C.G.Q.QuestionAdminControllerTest        : No active profile set, falling back to default profiles: default
+2020-07-16 13:40:28.509  INFO 41246 --- [    Test worker] C.G.Q.QuestionAdminControllerTest        : Started QuestionAdminControllerTest in 0.323 seconds (JVM running for 8.244)
+2020-07-16 13:40:28.512  INFO 41246 --- [    Test worker] C.G.Question.QuestionAdminController     : Fetching the question by its id1for the current instructor to view
+2020-07-16 13:40:28.512  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getQuestionById repository function to fetch a question from the Database by questionId 1
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/viewQuestion
+       Parameters = {questionId=[1]}
+          Headers = []
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionAdminController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionAdminController#viewQuestion(long, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/viewQuestion
+             View = null
+        Attribute = question
+            value = CSCI5308.GroupFormationTool.Question.Question@1ae4b1a8
+           errors = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:&quot;en&quot;, Content-Type:&quot;text/html;charset=UTF-8&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = text/html;charset=UTF-8
+             Body = &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
+    &lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;
+    &lt;link href=&quot;favicon.ico&quot; rel=&quot;icon&quot;/&gt;
+    &lt;title&gt;View Question&lt;/title&gt;
+    &lt;link
+            crossorigin=&quot;anonymous&quot;
+            href=&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;
+            integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot;
+            rel=&quot;stylesheet&quot;/&gt;
+
+&lt;/head&gt;
+&lt;body style=&quot;background-color: #e7ebee&quot;&gt;
+&lt;div class=&quot;container&quot; style=&quot;padding: 20px;font-size:24px;&quot;&gt;
+    &lt;div&gt;
+        &lt;p&gt;You have not yet logged in to the application. Please login to
+            continue...&lt;/p&gt;
+        &lt;a href=&quot;/login&quot;&gt;Click here to log in!&lt;/a&gt;
+    &lt;/div&gt;
+
+    
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:28.531  INFO 41246 --- [    Test worker] C.G.Question.QuestionAdminController     : Fetching the question bank sorted based on title for the logged in instructor
+2020-07-16 13:40:28.532  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getSortedQuestionListForInstructor repository function to fetch the question bank in a sorted order from the Database by email id anonymousUser
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/sortQuestion
+       Parameters = {sortby=[title]}
+          Headers = []
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionAdminController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionAdminController#sortQuestion(String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/questionManager
+             View = null
+        Attribute = questionList
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:&quot;en&quot;, Content-Type:&quot;text/html;charset=UTF-8&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = text/html;charset=UTF-8
+             Body = &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
+    &lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;
+    &lt;link href=&quot;favicon.ico&quot; rel=&quot;icon&quot;/&gt;
+    &lt;title&gt;Instructor Question Manager&lt;/title&gt;
+    &lt;link
+            crossorigin=&quot;anonymous&quot;
+            href=&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;
+            integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot;
+            rel=&quot;stylesheet&quot;/&gt;
+
+&lt;/head&gt;
+&lt;body style=&quot;background-color: #e7ebee&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div&gt;
+        &lt;p&gt;You have not yet logged in to the application. Please login to
+            continue...&lt;/p&gt;
+        &lt;a href=&quot;/login&quot;&gt;Click here to log in!&lt;/a&gt;
+    &lt;/div&gt;
+
+    
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:28.536  INFO 41246 --- [    Test worker] C.G.Question.QuestionAdminController     : Fetching the question bank for the logged in instructor with email id anonymousUser
+2020-07-16 13:40:28.536  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getQuestionListForInstructor repository function to fetch the question bank from the Database by email id anonymousUser
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/questionManager
+       Parameters = {}
+          Headers = []
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionAdminController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionAdminController#questionList(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/questionManager
+             View = null
+        Attribute = questionList
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:&quot;en&quot;, Content-Type:&quot;text/html;charset=UTF-8&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = text/html;charset=UTF-8
+             Body = &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
+    &lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;
+    &lt;link href=&quot;favicon.ico&quot; rel=&quot;icon&quot;/&gt;
+    &lt;title&gt;Instructor Question Manager&lt;/title&gt;
+    &lt;link
+            crossorigin=&quot;anonymous&quot;
+            href=&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;
+            integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot;
+            rel=&quot;stylesheet&quot;/&gt;
+
+&lt;/head&gt;
+&lt;body style=&quot;background-color: #e7ebee&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div&gt;
+        &lt;p&gt;You have not yet logged in to the application. Please login to
+            continue...&lt;/p&gt;
+        &lt;a href=&quot;/login&quot;&gt;Click here to log in!&lt;/a&gt;
+    &lt;/div&gt;
+
+    
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.3</a> at Jul. 16, 2020, 1:40:29 p.m.</p>
+</div>
+</div>
+</body>
+</html>

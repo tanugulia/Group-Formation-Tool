@@ -1,0 +1,54 @@
+variables:
+  GRADLE_OPTS: "-Dorg.gradle.daemon=false"
+  GIT_STRATEGY: "clone"
+
+
+before_script:
+  - chmod +x ./gradlew
+  - export GRADLE_USER_HOME='pwd'/.gradle
+
+build:
+  stage: build
+  tags:
+    - grad
+  image: gradle:alpine
+  script: ./gradlew --build-cache assemble
+  only:
+    refs:
+      - branches
+
+test:
+  stage: test
+  tags:
+    - grad
+  image: gradle:alpine
+  script: ./gradlew check
+  only:
+    refs:
+      - branches
+
+deploy-test:
+  stage: deploy
+  tags:
+    - dalfcs_gitlab_docker_ci
+  image: ruby:2.3
+  script: 
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app="formgroups22" --api-key="7c98c23a-b144-4f40-9955-58f585d02340"
+  only:
+    - develop
+
+deploy-prod:
+  stage: deploy
+  tags:
+    - dalfcs_gitlab_docker_ci
+  image: ruby:2.3
+  script: 
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app="formgroups22-prod" --api-key="7c98c23a-b144-4f40-9955-58f585d02340"
+  only:
+    - master

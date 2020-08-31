@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Question.QuestionAdminRepositoryTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:27" hostname="Prabhjots-MacBook-Pro.local" time="0.005">
+  <properties/>
+  <testcase name="getQuestionListForInstructorTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionAdminRepositoryTest" time="0.001"/>
+  <testcase name="getSortedQuestionListForInstructorTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionAdminRepositoryTest" time="0.001"/>
+  <testcase name="getQuestionByIdTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionAdminRepositoryTest" time="0.001"/>
+  <testcase name="getOptionsForTheQuestionTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionAdminRepositoryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

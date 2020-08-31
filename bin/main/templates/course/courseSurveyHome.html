@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Course Details</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+    <style>
+h4 {
+	display: inline;
+}
+
+    </style>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <h3 class="text-center">Course Details</h3>
+    <h4>Course :</h4>
+    <h4 th:text="${courseName}"></h4>
+    <div th:if="${surveyPublished != null}">
+        <br/>
+        <div th:if="${surveyCompleted != null}">
+            <h4>Survey is now available!</h4>
+            <br/> <br/>
+            <h4>Responses of the survey would be used to form groups</h4>
+            <br/> <br/>
+            <h4>
+                <a
+                        class="btn btn-primary btn-md"
+                        th:href="@{/courseSurveyResponse?courseName={courseName}&courseId={courseId}
+						 (courseName=${courseName},courseId=${courseId})}">Take the survey >></a>
+            </h4>
+        </div>
+        <div th:if="${surveyCompleted == null}">
+            <h4>Survey submitted!</h4>
+            <br/> <br/>
+            <h4>You have already completed one survey for this course!</h4>
+            <br/> <br/>
+            <h4>
+                <a class="btn btn-primary btn-md" th:href="@{/courseList}">Go
+                    back to course list</a>
+            </h4>
+        </div>
+    </div>
+    <div th:if="${surveyPublished == null}">
+        <br/>
+        <h4>
+            Survey has not been published yet! Please check again in few days. <br/>
+            <br/> <a class="btn btn-primary btn-md" th:href="@{/courseList}">Go
+            back to course list</a>
+        </h4>
+    </div>
+
+</div>
+</body>
+</html>

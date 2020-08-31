@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Question Manager</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div sec:authorize="!isAuthenticated()">
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+        <h3 class="text-center">Questions</h3>
+        <div>
+            Sort by: <br/> <a
+                th:href="@{/questionManager/sortQuestion(sortby='title')}">
+            <button class="btn btn-primary btn-sm" type="submit">Question
+                Title
+            </button>
+        </a> <a
+                th:href="@{/questionManager/sortQuestion(sortby='created_date')}">
+            <button class="btn btn-primary btn-sm" type="submit">Created
+                date
+            </button>
+        </a>
+        </div>
+        <br/> <br/>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Question Title</th>
+                    <th scope="col">Question Text</th>
+                    <th scope="col">Created On</th>
+                    <th scope="col">Delete Question</th>
+                    <th scope="col">View Question</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="question : ${questionList}"
+                    th:if="${questionList!=null and !questionList.empty} ">
+                    <td th:text="${question.title}"></td>
+                    <td th:text="${question.text}"></td>
+                    <td th:text="${question.createdDate}"></td>
+                    <td><a class="text-danger"
+                           th:href="@{/questionManager/deleteQuestion?questionId={quesId} (quesId=${question.id})}"
+                           th:onclick="return confirm('Are you sure you want to delete the question?')">
+                        <span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete
+                    </a></td>
+                    <td><a
+                            th:href="@{/questionManager/viewQuestion?questionId={quesId} (quesId=${question.id})}">View
+                    </a></td>
+                </tr>
+                <tr th:if="${questionList ==null or questionList.empty}">
+
+                    <td colspan=5 style="color: red">No questions available
+                        yet!!
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <br/> <br/>
+        <div class="text-center">
+            <a class="btn btn-primary btn-md"
+               th:href="@{/questionManager/createQuestion}"> <span
+                    class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp; Create a
+                question
+            </a>
+        </div>
+        <br/> <br/>
+        <div class="text-center">
+            <a th:href="@{/courseList}">
+                <button class="btn btn-success btn-sm" type="submit">Back
+                    to your courses
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

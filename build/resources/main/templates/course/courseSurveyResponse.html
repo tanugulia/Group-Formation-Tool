@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Course Survey</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div sec:authorize="!isAuthenticated()">
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+        <h3>
+            Survey for course : <label th:text="${courseName}"></label>
+
+        </h3>
+        <form action="#" data-toggle="validator"
+              id="createQuestionForm" method="post" role="form"
+              th:action="@{/courseSurveyResponse}">
+            <table class="table table-bordered">
+                <tbody>
+
+                <tr th:each="question, iter : ${surveyQuestions}">
+                    <td><label th:text="${iter.index} + ${1}"></label><label>.
+                    </label> <label th:text="${question.title}"></label>
+                        <input class="form-control"
+                               name="response" placeholder="Enter your response here" th:id="${courseId}"
+                               th:name="|CourseId|" th:value="${courseId}" type="hidden"/>
+                        <div th:if="${question !=null && question.type == 1}">
+                            <div class="form-group input-group has-feedback"
+                                 style="width: 100%;">
+                                <label for="response" th:text="${question.text}"></label> <input
+                                    class="form-control"
+                                    name="response" placeholder="Enter your response here"
+                                    required th:id="${iter.index+1}"
+                                    th:name="|${iter.index+1}_${question.id}|" type="number"/> <span
+                                    aria-hidden="true" class="form-control-feedback"></span>
+                            </div>
+                        </div>
+                        <div class="table-responsive"
+                             th:if="${question !=null && question.type == 2}">
+                            <label th:text="${question.text}"></label>
+                            <table class="table table-bordered">
+                                <tbody>
+                                <tr th:each="data, iterinner : ${question.choices}">
+                                    <td>
+                                        <div class="radio">
+                                            <label> <input name="option" th:id="|td${iterinner.index}|"
+                                                           th:name="|${iter.index+1}_${question.id}_${data.value}_${data.text}|"
+                                                           type="radio"/>
+                                            </label> <span th:text="${data.text}"></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div th:if="${question !=null && question.type == 3}">
+
+                            <div class="table-responsive">
+                                <label th:text="${question.text}"></label>
+                                <table class="table table-bordered">
+                                    <tbody>
+                                    <tr th:each="data, iterinner : ${question.choices}">
+                                        <td>
+                                            <div class="checkbox">
+                                                <label> <input name="option" th:id="|td${iterinner.index}|"
+                                                               th:name="|${iter.index+1}_${question.id}_${data.value}_${data.text}|"
+                                                               type="checkbox"/>
+                                                </label> <span th:text="${data.text}"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div th:if="${question !=null && question.type == 4}">
+                            <div class="form-group input-group has-feedback"
+                                 style="width: 100%;">
+                                <label th:text="${question.text}"></label>
+                                <textarea class="form-control" id="response" name="response"
+                                          placeholder="Enter your response here" required
+                                          rows="4" th:name="|${iter.index+1}_${question.id}|"></textarea>
+                                <span aria-hidden="true" class="form-control-feedback"></span>
+                            </div>
+                        </div>
+                        <br/></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="text-center">
+                <a class="btn btn-primary btn-md" th:href="@{/courseList}">
+                    Back</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary btn-md" type="submit">Complete</button>
+                <br/>
+                <br/>
+            </div>
+        </form>
+
+    </div>
+</div>
+</body>
+</html>

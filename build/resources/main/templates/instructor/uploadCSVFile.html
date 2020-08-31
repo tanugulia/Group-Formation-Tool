@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="favicon.ico"/>
+    <title>Instructor Course List</title>
+    <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div sec:authorize="!isAuthenticated()">
+        <!-- Send them to login. -->
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+
+
+        <h3 class="text-center">Upload CSV</h3>
+        <br/>
+        <form method="POST"
+              th:action="@{/uploadCSVFile(courseId=${CourseId})}"
+              enctype="multipart/form-data" role="form" data-toggle="validator">
+            <div style="border: 1px solid #ccc; padding: 20px; cursor: pointer;">
+                <span class="glyphicon glyphicon-file"></span>&nbsp;&nbsp;Select a
+                CSV file&nbsp;&nbsp;<input type="file" name="file"
+                                           class="form-control-file" id="file" accept=".csv"
+                                           style="display: inline-block">
+            </div>
+            <br/> <br/>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm btn-block">Import
+                    Students
+                </button>
+                <br/> <a th:href="@{/courseList}"
+                         class="btn btn-danger btn-sm btn-block ">Back to course list</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

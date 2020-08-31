@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Question.QuestionAdminControllerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:28" hostname="Prabhjots-MacBook-Pro.local" time="0.029">
+  <properties/>
+  <testcase name="viewQuestionTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionAdminControllerTest" time="0.02"/>
+  <testcase name="sortQuestionTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionAdminControllerTest" time="0.005"/>
+  <testcase name="questionListTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionAdminControllerTest" time="0.004"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.7.RELEASE)
+
+2020-07-16 13:40:28.196  INFO 41246 --- [    Test worker] C.G.Q.QuestionAdminControllerTest        : Starting QuestionAdminControllerTest on Prabhjots-MacBook-Pro.local with PID 41246 (started by prabhjotkaur in /Users/prabhjotkaur/git/group22)
+2020-07-16 13:40:28.196  INFO 41246 --- [    Test worker] C.G.Q.QuestionAdminControllerTest        : No active profile set, falling back to default profiles: default
+2020-07-16 13:40:28.509  INFO 41246 --- [    Test worker] C.G.Q.QuestionAdminControllerTest        : Started QuestionAdminControllerTest in 0.323 seconds (JVM running for 8.244)
+2020-07-16 13:40:28.512  INFO 41246 --- [    Test worker] C.G.Question.QuestionAdminController     : Fetching the question by its id1for the current instructor to view
+2020-07-16 13:40:28.512  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getQuestionById repository function to fetch a question from the Database by questionId 1
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/viewQuestion
+       Parameters = {questionId=[1]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionAdminController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionAdminController#viewQuestion(long, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/viewQuestion
+             View = null
+        Attribute = question
+            value = CSCI5308.GroupFormationTool.Question.Question@1ae4b1a8
+           errors = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>View Question</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container" style="padding: 20px;font-size:24px;">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:28.531  INFO 41246 --- [    Test worker] C.G.Question.QuestionAdminController     : Fetching the question bank sorted based on title for the logged in instructor
+2020-07-16 13:40:28.532  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getSortedQuestionListForInstructor repository function to fetch the question bank in a sorted order from the Database by email id anonymousUser
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/sortQuestion
+       Parameters = {sortby=[title]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionAdminController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionAdminController#sortQuestion(String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/questionManager
+             View = null
+        Attribute = questionList
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Question Manager</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:28.536  INFO 41246 --- [    Test worker] C.G.Question.QuestionAdminController     : Fetching the question bank for the logged in instructor with email id anonymousUser
+2020-07-16 13:40:28.536  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getQuestionListForInstructor repository function to fetch the question bank from the Database by email id anonymousUser
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/questionManager
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionAdminController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionAdminController#questionList(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/questionManager
+             View = null
+        Attribute = questionList
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Question Manager</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

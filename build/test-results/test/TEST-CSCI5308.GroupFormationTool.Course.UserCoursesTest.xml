@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Course.UserCoursesTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:24" hostname="Prabhjots-MacBook-Pro.local" time="0.072">
+  <properties/>
+  <testcase name="getInstructorCoursesTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.031"/>
+  <testcase name="getStudentCoursesTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.002"/>
+  <testcase name="getCourseIdTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.001"/>
+  <testcase name="setBannerIdTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.001"/>
+  <testcase name="usersCurrentlyNotInstructorsForCourseTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.003"/>
+  <testcase name="getTAForCourseTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.003"/>
+  <testcase name="setCourseDescriptionTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.001"/>
+  <testcase name="setCourseNameTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.001"/>
+  <testcase name="addInstructorsToCourseTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.003"/>
+  <testcase name="enrollTAForCourseUsingEmailIdTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.003"/>
+  <testcase name="setIdTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.001"/>
+  <testcase name="getUserRoleByEmailIdTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.001"/>
+  <testcase name="getCourseDescriptionTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.001"/>
+  <testcase name="getUserRoleTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.001"/>
+  <testcase name="getTACoursesTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.002"/>
+  <testcase name="getCourseNameTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.001"/>
+  <testcase name="setUserRoleTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.001"/>
+  <testcase name="getBannerIdTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.001"/>
+  <testcase name="getInstructorsForCourseTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesTest" time="0.002"/>
+  <system-out><![CDATA[2020-07-16 13:40:24.889  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to get instructors for a course using email Id
+2020-07-16 13:40:24.889  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to get instructors for a course using email Id
+2020-07-16 13:40:24.892  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the courses enrolled by a student using student's email Id
+2020-07-16 13:40:24.893  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the courses enrolled by a student using student's email Id
+2020-07-16 13:40:24.900  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : The function call return the users that are not enrolled as an instructor for a course
+2020-07-16 13:40:24.900  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : The function call return the users that are not enrolled as an instructor for a course
+2020-07-16 13:40:24.902  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to get TA for a course using course Id
+2020-07-16 13:40:24.903  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to get TA for a course using course Id
+2020-07-16 13:40:24.909  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to add an instructor for a course using course Id and email Id
+2020-07-16 13:40:24.910  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to add an instructor for a course using course Id and email Id
+2020-07-16 13:40:24.913  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to enroll a TA for the course using email id
+2020-07-16 13:40:24.913  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to enroll a TA for the course using email id
+2020-07-16 13:40:24.917  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the role of a user by email Id
+2020-07-16 13:40:24.917  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the role of a user by email Id
+2020-07-16 13:40:24.922  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the courses for a TA using email Id
+2020-07-16 13:40:24.923  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the courses for a TA using email Id
+2020-07-16 13:40:24.930  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to get instructor for a course using course Id
+2020-07-16 13:40:24.930  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to get instructor for a course using course Id
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

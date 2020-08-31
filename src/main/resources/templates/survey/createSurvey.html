@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Create Survey</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div sec:authorize="!isAuthenticated()">
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+    <div sec:authorize="isAuthenticated()">
+        <h3 class="text-center"
+            th:text="'Create a survey for the course ' + ${courseName}"></h3>
+
+        <form method="post" th:action="@{/questionManager/searchQuestionForSurvey(surveyId=${surveyId},courseId=${courseId},courseName=${courseName})}">
+            <div class="md-form mt-0">
+                <label>Search for a Question by Title</label>
+                <input aria-label="Search" class="form-control" id="questionTitle" name="questionTitle"
+                       placeholder="Search for a Question by Title" type="text">
+                <br/><br/>
+                <button class="btn btn-success btn-sm" type="submit">Search
+                </button>
+            </div>
+        </form>
+        <div th:if="questionList!=null">
+            <h3 class="text-center">Searched Questions</h3>
+            <br/> <br/>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Question Title</th>
+                        <th scope="col">Question Text</th>
+                        <th scope="col">Add Question to the survey</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="question : ${questionList}"
+                        th:if="${questionList!=null and !questionList.empty} ">
+                        <td th:text="${question.title}"></td>
+                        <td th:text="${question.text}"></td>
+                        <td>
+                            <a th:href="@{/survey/addQuestionToSurvey(questionId=${question.id},surveyId=${surveyId},courseId=${courseId}, courseName=${courseName})}">
+                                <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;&nbsp;Add to Survey
+                            </a></td>
+                    </tr>
+                    <tr th:if="${questionList ==null or questionList.empty}">
+
+                        <td colspan=5 style="color: red">No questions available
+                            yet!!
+                        </td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br/> <br/>
+            <br/> <br/>
+        </div>
+        <div th:if="surveyQuestionList!=null">
+            <h3 class="text-center">Added Questions to the Survey</h3>
+            <br/> <br/>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th scope="col">Question Title</th>
+                        <th scope="col">Question Text</th>
+                        <th scope="col">Delete Question from the survey</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="question : ${surveyQuestionList}"
+                        th:if="${surveyQuestionList!=null and !surveyQuestionList.empty} ">
+                        <td th:text="${question.title}"></td>
+                        <td th:text="${question.text}"></td>
+                        <td>
+                            <a th:href="@{/survey/deleteQuestionFromSurvey(questionId=${question.id},surveyId=${surveyId},courseId=${courseId}, courseName=${courseName})}">
+                                <span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete question from Survey
+                            </a></td>
+                    </tr>
+                    <tr th:if="${surveyQuestionList ==null or surveyQuestionList.empty}">
+
+                        <td colspan=5 style="color: red">No questions available
+                            yet!!
+                        </td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br/> <br/>
+        </div>
+        <div class="text-center">
+            <a th:href="@{/courseList}">
+                <button class="btn btn-success btn-sm" type="submit">Back
+                    to your courses
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

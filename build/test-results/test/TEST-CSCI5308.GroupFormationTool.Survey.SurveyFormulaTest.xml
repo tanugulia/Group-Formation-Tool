@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" tests="24" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:29" hostname="Prabhjots-MacBook-Pro.local" time="0.029">
+  <properties/>
+  <testcase name="getSurveyIdTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.001"/>
+  <testcase name="getQuestionTextTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="setFreeTextSimilarityTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="isCompareDisimilarityTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="getQuestionTypeTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.001"/>
+  <testcase name="setCompareSimilarityTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="setFreeTextDisimilarityTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="getCourseIdTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.001"/>
+  <testcase name="setNumericLessThanTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.001"/>
+  <testcase name="setSurveyIdTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.001"/>
+  <testcase name="isFreeTextSimilarityTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="setCourseIdTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="createSurveyFormulaTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.001"/>
+  <testcase name="isCompareSimilarityTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.001"/>
+  <testcase name="getSurveyDetailsToSetAlgoTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.002"/>
+  <testcase name="setQuestionIdTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.001"/>
+  <testcase name="setQuestionTextTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.001"/>
+  <testcase name="getNumericGreaterThanTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="setQuestionTypeTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="setCompareDisimilarityTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="getQuestionIdTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="isFreeTextDisimilarityTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.0"/>
+  <testcase name="getNumericLessThanTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.001"/>
+  <testcase name="setNumericGreaterThanTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyFormulaTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

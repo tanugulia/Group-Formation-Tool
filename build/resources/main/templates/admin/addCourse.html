@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="favicon.ico"/>
+    <title>Admin Add Course</title>
+    <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="flex align-items-center text-center">
+    <div sec:authorize="!isAuthenticated()">
+        <!-- Send them to login. -->
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+        <h1>Add a Course</h1>
+        <form action="#" th:action="@{/admin/addCourse}"
+              th:object="${course}" method="post"
+              class="m-t col-md-4 col-md-offset-4" role="form"
+              data-toggle="validator">
+
+            <div class="form-group input-group has-feedback">
+					<span class="input-group-addon"> <span
+                            class="glyphicon glyphicon-tags"></span>
+					</span><input type="text" th:field="*{id}" placeholder="Course Id"
+                                  class="form-control" required/> <span
+                    class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            </div>
+
+            <div class="form-group input-group has-feedback">
+					<span class="input-group-addon"> <span
+                            class="glyphicon glyphicon-education"></span>
+					</span> <input type="text" th:field="*{name}" placeholder="Course Name"
+                                   class="form-control" required/> <span
+                    class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            </div>
+            <div class="form-group input-group has-feedback">
+					<span class="input-group-addon"> <span
+                            class="glyphicon glyphicon-credit-card"></span>
+					</span> <input type="number" th:field="*{credits}"
+                                   placeholder="Course Credits" class="form-control" required/> <span
+                    class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            </div>
+            <div class="form-group input-group has-feedback">
+					<span class="input-group-addon"> <span
+                            class="glyphicon glyphicon-list"></span>
+					</span> <input type="text" th:field="*{description}"
+                                   placeholder="Course Description" class="form-control" required/>
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm btn-block">Add
+                    Course
+                </button>
+            </div>
+            <br/> <a th:href="@{/courseList}"
+                     class="btn btn-danger btn-sm btn-block">Cancel</a>
+        </form>
+    </div>
+</div>
+</body>
+</html>

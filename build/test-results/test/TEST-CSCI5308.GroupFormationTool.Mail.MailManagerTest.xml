@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Mail.MailManagerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:27" hostname="Prabhjots-MacBook-Pro.local" time="0.002">
+  <properties/>
+  <testcase name="sendBatchMailTest()" classname="CSCI5308.GroupFormationTool.Mail.MailManagerTest" time="0.0"/>
+  <testcase name="setupMailSenderTest()" classname="CSCI5308.GroupFormationTool.Mail.MailManagerTest" time="0.002"/>
+  <testcase name="sendForgotPasswordMailTest()" classname="CSCI5308.GroupFormationTool.Mail.MailManagerTest" time="0.0"/>
+  <system-out><![CDATA[2020-07-16 13:40:27.690  INFO 41246 --- [    Test worker] C.GroupFormationTool.Mail.MailManager    : smtp connection for mail has been setup
+2020-07-16 13:40:27.690  INFO 41246 --- [    Test worker] C.GroupFormationTool.Mail.MailManager    : smtp connection for mail has been setup
+2020-07-16 13:40:27.690  INFO 41246 --- [    Test worker] C.GroupFormationTool.Mail.MailManager    : smtp connection for mail has been setup
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

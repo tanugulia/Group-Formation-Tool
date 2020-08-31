@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Survey.SurveyControllerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:29" hostname="Prabhjots-MacBook-Pro.local" time="0.07">
+  <properties/>
+  <testcase name="addQuestionToSurveyTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyControllerTest" time="0.022"/>
+  <testcase name="searchQuestionForSurvey()" classname="CSCI5308.GroupFormationTool.Survey.SurveyControllerTest" time="0.009"/>
+  <testcase name="deleteQuestionFromSurveyTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyControllerTest" time="0.007"/>
+  <testcase name="createSurveyFormula()" classname="CSCI5308.GroupFormationTool.Survey.SurveyControllerTest" time="0.017"/>
+  <testcase name="publishSurveyTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyControllerTest" time="0.008"/>
+  <testcase name="createSurveyTest()" classname="CSCI5308.GroupFormationTool.Survey.SurveyControllerTest" time="0.004"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.7.RELEASE)
+
+2020-07-16 13:40:28.958  INFO 41246 --- [    Test worker] C.G.Survey.SurveyControllerTest          : Starting SurveyControllerTest on Prabhjots-MacBook-Pro.local with PID 41246 (started by prabhjotkaur in /Users/prabhjotkaur/git/group22)
+2020-07-16 13:40:28.958  INFO 41246 --- [    Test worker] C.G.Survey.SurveyControllerTest          : No active profile set, falling back to default profiles: default
+2020-07-16 13:40:29.268  INFO 41246 --- [    Test worker] C.G.Survey.SurveyControllerTest          : Started SurveyControllerTest in 0.318 seconds (JVM running for 9.003)
+2020-07-16 13:40:29.272  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Creating survey for course 1
+2020-07-16 13:40:29.272  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Creating the survey for a course 1
+2020-07-16 13:40:29.272  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Survey created with id 0
+2020-07-16 13:40:29.272  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the survey questions for a course 1
+2020-07-16 13:40:29.273  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : There are0 questions in the database for the survey 0
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /survey/createSurvey
+       Parameters = {courseName=[Cloud], surveyId=[1], courseId=[1], surveyQuestionList=[]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Survey.SurveyController
+           Method = CSCI5308.GroupFormationTool.Survey.SurveyController#createSurvey(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = survey/createSurvey
+             View = null
+        Attribute = questionList
+            value = null
+        Attribute = surveyQuestionList
+            value = []
+        Attribute = surveyId
+            value = 0
+        Attribute = courseId
+            value = 1
+        Attribute = courseName
+            value = Cloud
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Create Survey</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</div>
+</body>
+</html>
+
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:29.288  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Creating survey for course 1
+2020-07-16 13:40:29.289  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Creating the survey for a course 1
+2020-07-16 13:40:29.289  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Survey created with id 0
+2020-07-16 13:40:29.289  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the survey questions for a course 1
+2020-07-16 13:40:29.289  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : There are0 questions in the database for the survey 0
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /survey/createSurvey
+       Parameters = {courseName=[Cloud], surveyId=[1], courseId=[1], surveyQuestionList=[]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Survey.SurveyController
+           Method = CSCI5308.GroupFormationTool.Survey.SurveyController#createSurvey(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = survey/createSurvey
+             View = null
+        Attribute = questionList
+            value = null
+        Attribute = surveyQuestionList
+            value = []
+        Attribute = surveyId
+            value = 0
+        Attribute = courseId
+            value = 1
+        Attribute = courseName
+            value = Cloud
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Create Survey</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</div>
+</body>
+</html>
+
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:29.294  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Get question list for the course 1with survey 1and question title title
+2020-07-16 13:40:29.294  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the survey questions for a course based on the searched value: title
+2020-07-16 13:40:29.294  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Get question list for the survey based on the course Id1
+2020-07-16 13:40:29.294  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the survey questions for a course 1
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /questionManager/searchQuestionForSurvey
+       Parameters = {courseName=[Cloud], surveyId=[1], courseId=[1], questionTitle=[title], _csrf=[865c79f5-a3e3-4667-b043-6b96b9d60e26]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Survey.SurveyController
+           Method = CSCI5308.GroupFormationTool.Survey.SurveyController#searchQuestionForSurvey(String, int, String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = survey/createSurvey
+             View = null
+        Attribute = surveyQuestionList
+            value = []
+        Attribute = surveyId
+            value = 1
+        Attribute = courseId
+            value = 1
+        Attribute = courseName
+            value = Cloud
+        Attribute = questionList
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Create Survey</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</div>
+</body>
+</html>
+
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:29.298  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Get question list for the course 1with survey 1and question title title
+2020-07-16 13:40:29.298  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the survey questions for a course based on the searched value: title
+2020-07-16 13:40:29.298  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Get question list for the survey based on the course Id1
+2020-07-16 13:40:29.298  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the survey questions for a course 1
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /questionManager/searchQuestionForSurvey
+       Parameters = {courseName=[Cloud], surveyId=[1], courseId=[1], questionTitle=[title], _csrf=[603f7a79-57a8-4eaa-956b-cffc0b5f9935]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Survey.SurveyController
+           Method = CSCI5308.GroupFormationTool.Survey.SurveyController#searchQuestionForSurvey(String, int, String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = survey/createSurvey
+             View = null
+        Attribute = surveyQuestionList
+            value = []
+        Attribute = surveyId
+            value = 1
+        Attribute = courseId
+            value = 1
+        Attribute = courseName
+            value = Cloud
+        Attribute = questionList
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Create Survey</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</div>
+</body>
+</html>
+
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:29.302  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Creating survey for course 1
+2020-07-16 13:40:29.303  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Creating the survey for a course 1
+2020-07-16 13:40:29.303  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Survey created with id 0
+2020-07-16 13:40:29.303  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the survey questions for a course 1
+2020-07-16 13:40:29.303  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : There are0 questions in the database for the survey 0
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /survey/createSurvey
+       Parameters = {courseName=[Cloud], surveyId=[1], courseId=[1], surveyQuestionList=[]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@42219197}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Survey.SurveyController
+           Method = CSCI5308.GroupFormationTool.Survey.SurveyController#createSurvey(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = survey/createSurvey
+             View = null
+        Attribute = questionList
+            value = null
+        Attribute = surveyQuestionList
+            value = []
+        Attribute = surveyId
+            value = 0
+        Attribute = courseId
+            value = 1
+        Attribute = courseName
+            value = Cloud
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Create Survey</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</div>
+</body>
+</html>
+
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:29.305  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Creating survey for course 1
+2020-07-16 13:40:29.305  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Creating the survey for a course 1
+2020-07-16 13:40:29.305  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Survey created with id 0
+2020-07-16 13:40:29.306  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the survey questions for a course 1
+2020-07-16 13:40:29.306  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : There are0 questions in the database for the survey 0
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /survey/createSurvey
+       Parameters = {courseName=[Cloud], surveyId=[1], courseId=[1], surveyQuestionList=[]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@6f70dd53}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Survey.SurveyController
+           Method = CSCI5308.GroupFormationTool.Survey.SurveyController#createSurvey(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = survey/createSurvey
+             View = null
+        Attribute = questionList
+            value = null
+        Attribute = surveyQuestionList
+            value = []
+        Attribute = surveyId
+            value = 0
+        Attribute = courseId
+            value = 1
+        Attribute = courseName
+            value = Cloud
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Create Survey</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</div>
+</body>
+</html>
+
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:29.321  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Getting survey Details for the formula setup
+2020-07-16 13:40:29.321  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Survey id for the courseadvSDCis 0
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /survey/createSurveyFormula
+       Parameters = {courseName=[advSDC], courseId=[1]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@3c2134f0}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Survey.SurveyController
+           Method = CSCI5308.GroupFormationTool.Survey.SurveyController#createSurveyFormula(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = survey/createSurveyFormula
+             View = null
+        Attribute = courseId
+            value = 1
+        Attribute = courseName
+            value = advSDC
+        Attribute = surveyId
+            value = 0
+        Attribute = surveyFormulaList
+            value = CSCI5308.GroupFormationTool.Survey.SurveyFormulaList@21cd880d
+           errors = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Create Survey</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:29.328  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Getting survey id for the course
+2020-07-16 13:40:29.328  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting survey id based on course id CSCI3901
+2020-07-16 13:40:29.328  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Survey id for the courseSDCis 0
+2020-07-16 13:40:29.328  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Publishing the survey for the course CSCI3901
+2020-07-16 13:40:29.329  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Check condition for survey published or not result value true
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /survey/publishSurvey
+       Parameters = {courseName=[SDC], courseId=[CSCI3901], _csrf=[cc4734df-720c-42ae-80d9-f6944a6b63bb]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Survey.SurveyController
+           Method = CSCI5308.GroupFormationTool.Survey.SurveyController#publishSurvey(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/instructorCourseDetails
+             View = null
+        Attribute = published
+            value = true
+        Attribute = courseId
+            value = CSCI3901
+        Attribute = courseName
+            value = SDC
+        Attribute = created
+            value = 0
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Course Details</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:29.332  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Getting survey id for the course
+2020-07-16 13:40:29.332  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting survey id based on course id CSCI3901
+2020-07-16 13:40:29.332  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Survey id for the courseSDCis 0
+2020-07-16 13:40:29.333  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Publishing the survey for the course CSCI3901
+2020-07-16 13:40:29.333  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Check condition for survey published or not result value false
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /survey/publishSurvey
+       Parameters = {courseName=[SDC], courseId=[CSCI3901], _csrf=[61939dd1-09f2-4616-8fb5-d144a1549607]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Survey.SurveyController
+           Method = CSCI5308.GroupFormationTool.Survey.SurveyController#publishSurvey(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/instructorCourseDetails
+             View = null
+        Attribute = published
+            value = false
+        Attribute = questionError
+            value = Add atleast one question to the survey to publish the survey!!
+        Attribute = courseId
+            value = CSCI3901
+        Attribute = courseName
+            value = SDC
+        Attribute = created
+            value = 0
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Course Details</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:29.336  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Creating survey for course 1
+2020-07-16 13:40:29.336  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Creating the survey for a course 1
+2020-07-16 13:40:29.337  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Survey created with id 1
+2020-07-16 13:40:29.337  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting the survey questions for a course 1
+2020-07-16 13:40:29.337  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : There are0 questions in the database for the survey 1
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /survey/createSurvey
+       Parameters = {courseName=[Cloud], courseId=[1]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@2c3abc35}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Survey.SurveyController
+           Method = CSCI5308.GroupFormationTool.Survey.SurveyController#createSurvey(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = survey/createSurvey
+             View = null
+        Attribute = questionList
+            value = null
+        Attribute = surveyQuestionList
+            value = []
+        Attribute = surveyId
+            value = 1
+        Attribute = courseId
+            value = 1
+        Attribute = courseName
+            value = Cloud
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Create Survey</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</div>
+</body>
+</html>
+
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

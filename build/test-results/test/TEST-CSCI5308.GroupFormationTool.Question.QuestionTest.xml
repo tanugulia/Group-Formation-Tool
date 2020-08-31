@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Question.QuestionTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:27" hostname="Prabhjots-MacBook-Pro.local" time="0.057">
+  <properties/>
+  <testcase name="getTitleTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.018"/>
+  <testcase name="getQuestionListForInstructorTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.001"/>
+  <testcase name="setCreatedDateTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.001"/>
+  <testcase name="deleteQuestionTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.002"/>
+  <testcase name="getChoicesTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.002"/>
+  <testcase name="getSortedQuestionListForInstructorTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.002"/>
+  <testcase name="setTitleTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.001"/>
+  <testcase name="getQuestionByIdTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.003"/>
+  <testcase name="setIdTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.001"/>
+  <testcase name="getIdTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.001"/>
+  <testcase name="setInstructorTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.001"/>
+  <testcase name="setTextTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.002"/>
+  <testcase name="getTextTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.001"/>
+  <testcase name="setTypeTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.001"/>
+  <testcase name="setChoicesTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.001"/>
+  <testcase name="getTypeTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.002"/>
+  <testcase name="createQuestionTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.006"/>
+  <testcase name="getCreatedDateTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.001"/>
+  <testcase name="getInstructorTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionTest" time="0.001"/>
+  <system-out><![CDATA[2020-07-16 13:40:27.761  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getQuestionListForInstructor repository function to fetch the question bank from the Database by email id padmeshdonthu@gmail.com
+2020-07-16 13:40:27.761  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getQuestionListForInstructor repository function to fetch the question bank from the Database by email id padmeshdonthu@gmail.com
+2020-07-16 13:40:27.765  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the deleteQuestion repository function to delete the question1from the Database
+2020-07-16 13:40:27.769  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getSortedQuestionListForInstructor repository function to fetch the question bank in a sorted order from the Database by email id title
+2020-07-16 13:40:27.770  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getSortedQuestionListForInstructor repository function to fetch the question bank in a sorted order from the Database by email id title
+2020-07-16 13:40:27.774  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getQuestionById repository function to fetch a question from the Database by questionId 1
+2020-07-16 13:40:27.774  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getOptionsForTheQuestion repository function to fetch the options of a multiple choice question from the Database by question id 1
+2020-07-16 13:40:27.791  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:27.791  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:27.791  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the options for question if applicable (Multiple Choice only)
+2020-07-16 13:40:27.791  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the createQuestion repository function to save the question to Database
+2020-07-16 13:40:27.792  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:27.792  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:27.792  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the options for question if applicable (Multiple Choice only)
+2020-07-16 13:40:27.792  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the createQuestion repository function to save the question to Database
+2020-07-16 13:40:27.792  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:27.792  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:27.792  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the options for question if applicable (Multiple Choice only)
+2020-07-16 13:40:27.792  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the createQuestion repository function to save the question to Database
+2020-07-16 13:40:27.793  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:27.793  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:27.793  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the options for question if applicable (Multiple Choice only)
+2020-07-16 13:40:27.793  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the createQuestion repository function to save the question to Database
+2020-07-16 13:40:27.793  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:27.794  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:27.794  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:27.794  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:27.794  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the options for question if applicable (Multiple Choice only)
+2020-07-16 13:40:27.794  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the createQuestion repository function to save the question to Database
+2020-07-16 13:40:27.794  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:27.794  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:27.794  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the options for question if applicable (Multiple Choice only)
+2020-07-16 13:40:27.794  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the createQuestion repository function to save the question to Database
+2020-07-16 13:40:27.795  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:27.795  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:27.795  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the options for question if applicable (Multiple Choice only)
+2020-07-16 13:40:27.795  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the createQuestion repository function to save the question to Database
+2020-07-16 13:40:27.795  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:27.795  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:27.795  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:27.796  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

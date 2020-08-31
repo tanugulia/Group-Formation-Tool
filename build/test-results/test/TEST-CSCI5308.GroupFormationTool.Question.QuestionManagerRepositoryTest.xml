@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Question.QuestionManagerRepositoryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:28" hostname="Prabhjots-MacBook-Pro.local" time="0.002">
+  <properties/>
+  <testcase name="deleteQuestionTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionManagerRepositoryTest" time="0.0"/>
+  <testcase name="createQuestionTest()" classname="CSCI5308.GroupFormationTool.Question.QuestionManagerRepositoryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

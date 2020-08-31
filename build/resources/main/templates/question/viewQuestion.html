@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>View Question</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container" style="padding: 20px;font-size:24px;">
+    <div sec:authorize="!isAuthenticated()">
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+        <h3 class="text-center">View your Question</h3>
+        <div th:if="${question ==null}">
+            The question does not exist!!!
+        </div>
+        <div th:if="${question !=null && question.type == 1}">
+            <div class="form-group input-group has-feedback" style="width:100%;">
+                <label for="response" th:text="${question.text}"></label> <input
+                    class="form-control" name="response"
+                    placeholder="Enter your response here" required type="text"/> <span
+                    aria-hidden="true" class="form-control-feedback"></span>
+            </div>
+        </div>
+        <div class="table-responsive" th:if="${question !=null && question.type == 2}">
+            <label th:text="${question.text}"></label>
+            <table class="table table-bordered">
+                <tbody>
+                <tr th:each="data, iter : ${question.choices}">
+                    <td>
+                        <div class="radio">
+                            <label>
+                                <input name="option" th:id="|td${iter.index}|"
+                                       type="radio"/>
+                            </label>
+                            <span th:text="${data.text}"></span>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div th:if="${question !=null && question.type == 3}">
+
+            <div class="table-responsive">
+                <label th:text="${question.text}"></label>
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr th:each="data, iter : ${question.choices}">
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input name="option" th:id="|td${iter.index}|"
+                                           type="checkbox"/>
+                                </label>
+                                <span th:text="${data.text}"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div th:if="${question !=null && question.type == 4}">
+            <div class="form-group input-group has-feedback" style="width:100%;">
+                <label th:text="${question.text}"></label>
+                <textarea class="form-control" id="response" name="response"
+                          placeholder="Enter your response here" required rows="4"></textarea>
+                <span aria-hidden="true" class="form-control-feedback"></span>
+            </div>
+        </div>
+        <div><a th:href="@{/questionManager/deleteQuestion?questionId={quesId} (quesId=${question.id})}">
+            <button class="btn btn-danger btn-md" th:onclick="return confirm('Are you sure you want to delete the question')" type="submit"
+                    value="delete">
+                Delete this question
+            </button>
+        </a>
+        </div>
+        <br/>
+        <br/>
+        <div class="text-center">
+            <a class="btn btn-primary btn-md"
+               th:href="@{/questionManager/questionManager}"> <span
+                    class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp; Back to
+                Question List
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

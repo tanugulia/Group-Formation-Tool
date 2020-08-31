@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Guest Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div sec:authorize="!isAuthenticated()">
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+
+        <div
+                th:if="${authorizationError == null and courses!=null and !courses.empty} ">
+            <h3 class="text-center">Courses Available Are</h3>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">Course Id</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Course Details</th>
+                        <th scope="col">Course Credits</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="course : ${courses}">
+                        <td th:text="${course.id}"></td>
+                        <td th:text="${course.name}"></td>
+                        <td th:text="${course.description}"></td>
+                        <td th:text="${course.credits}"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br/>
+            <form class="text-center" method="post" th:action="@{/logout}">
+                <button class="btn btn-danger btn-sm" type="submit">Sign
+                    Out
+                </button>
+            </form>
+
+        </div>
+        <div
+                th:if="${authorizationError == null and courses ==null or courses.empty} ">
+            <h3 class="text-center">Courses Available Are</h3>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col">Course Id</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Course Details</th>
+                        <th scope="col">Course Credits</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td colspan=3>No courses available!!</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br/>
+            <form class="text-center" method="post" th:action="@{/logout}">
+                <button class="btn btn-danger btn-sm" type="submit">Sign
+                    Out
+                </button>
+            </form>
+
+        </div>
+
+        <div class="validation-message alert alert-danger"
+             role="alert" th:text="${authorizationError}"
+             th:unless="${authorizationError==null}">
+        </div>
+    </div>
+</div>
+</body>
+</html>

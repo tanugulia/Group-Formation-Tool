@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="favicon.ico"/>
+    <title>Login Page</title>
+    <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div>
+    <div class="flex align-items-center text-center">
+        <form autocomplete="off" action="#" th:action="@{/login}"
+              method="post" class="m-t col-md-4 col-md-offset-4" role="form"
+              data-toggle="validator">
+
+            <br/>
+            <h4>Sign in to continue!</h4>
+
+            <div th:if="${param.error}"
+                 class="validation-message alert alert-danger" role="alert">The
+                email address/password is not valid.
+            </div>
+            <br>
+
+            <div th:if="${param.logout}"
+                 class="validation-message alert alert-danger" role="alert">You
+                are now logged out.
+            </div>
+
+            <div class="form-group input-group has-feedback">
+					<span class="input-group-addon"> <span
+                            class="glyphicon glyphicon-envelope"></span>
+					</span> <input type="email" name="username" placeholder="Email Address"
+                                   class="form-control" required/> <span
+                    class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            </div>
+
+            <br/>
+            <div class="form-group input-group has-feedback">
+					<span class="input-group-addon"> <span
+                            class="glyphicon glyphicon-lock"></span>
+					</span> <input type="password" name="password" placeholder="Password"
+                                   class="form-control" required/> <span
+                    class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            </div>
+
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm btn-block">Login</button>
+            </div>
+            <br/>
+            <div>
+                <a th:href="@{/register}" class="text-primary">Are you a new
+                    user? Click here to register!</a>
+            </div>
+            <br/>
+            <div>
+                <a th:href="@{/forgotPassword}" class="text-secondary">Forgot
+                    Password?</a>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+

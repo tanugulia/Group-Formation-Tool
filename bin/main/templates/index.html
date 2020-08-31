@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+</head>
+<body style="background-color: #e7ebee">
+<div class="d-flex align-items-center text-center">
+
+    <div sec:authorize="isAuthenticated()">
+        <h4 class="text-right" style="margin-right: 20px;" th:inline="text">Email
+            Id: [[${#httpServletRequest.remoteUser}]]</h4>
+    </div>
+    <h1>Welcome to the CSCI5308 Group Formation Tool!</h1>
+    <div sec:authorize="isAuthenticated()" style="padding: 20px;">
+        <br/> <br/> Welcome to Group Formation Tool. Group work can often
+        go awry when the members do not gel with each other. Group Formation
+        Tool is your one stop solution for forming the best groups that can
+        build a high quality product. While forming groups, we consider all
+        the dimensions of each member. With easy accessibility for different
+        users like Instructor, TA and Student, this tool aids the learning
+        experience for university courses. To explore more, view the courses
+        accessible to you. <br/>
+        <br/>
+        <div>
+            <a class="btn btn-primary btn-sm" th:href="@{/courseList}">View
+                Courses</a>
+        </div>
+    </div>
+    <div sec:authorize="!isAuthenticated()">
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+
+    <br/>
+    <div sec:authorize="isAuthenticated()">
+        <form method="post" th:action="@{/logout}">
+            <button class="btn btn-danger btn-sm" type="submit">
+                Sign Out
+            </button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

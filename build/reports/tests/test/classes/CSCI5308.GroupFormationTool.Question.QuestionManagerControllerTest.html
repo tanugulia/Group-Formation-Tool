@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - QuestionManagerControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>QuestionManagerControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/CSCI5308.GroupFormationTool.Question.html">CSCI5308.GroupFormationTool.Question</a> &gt; QuestionManagerControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.037s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">createQuestionTest()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteQuestionTest()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">saveQuestionTest()</td>
+<td class="success">0.024s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.7.RELEASE)
+
+2020-07-16 13:40:27.821  INFO 41246 --- [    Test worker] C.G.Q.QuestionManagerControllerTest      : Starting QuestionManagerControllerTest on Prabhjots-MacBook-Pro.local with PID 41246 (started by prabhjotkaur in /Users/prabhjotkaur/git/group22)
+2020-07-16 13:40:27.822  INFO 41246 --- [    Test worker] C.G.Q.QuestionManagerControllerTest      : No active profile set, falling back to default profiles: default
+2020-07-16 13:40:28.143  INFO 41246 --- [    Test worker] C.G.Q.QuestionManagerControllerTest      : Started QuestionManagerControllerTest in 0.331 seconds (JVM running for 7.879)
+2020-07-16 13:40:28.148  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Saving the question created by the instructor to the database
+2020-07-16 13:40:28.149  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:28.149  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:28.149  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the options for question if applicable (Multiple Choice only)
+2020-07-16 13:40:28.149  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the createQuestion repository function to save the question to Database
+2020-07-16 13:40:28.149  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Question is saved to the database and the instructor views the saved question
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /questionManager/createQuestion
+       Parameters = {questionTitle=[Sample title], questionText=[Sample text], questionType=[1], optionText=[], optionValue=[], _csrf=[82212a61-d553-4e18-af49-c41657a9ff19]}
+          Headers = []
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionManagerController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionManagerController#saveQuestion(Model, String, String, String, List, List)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = redirect:/questionManager/viewQuestion?questionId=5
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 302
+    Error message = null
+          Headers = [Content-Language:&quot;en&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;, Location:&quot;/questionManager/viewQuestion?questionId=5&quot;]
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = /questionManager/viewQuestion?questionId=5
+          Cookies = []
+2020-07-16 13:40:28.151  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Saving the question created by the instructor to the database
+2020-07-16 13:40:28.152  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Creating the question and saving it to the database
+2020-07-16 13:40:28.152  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Checking for invalid data
+2020-07-16 13:40:28.152  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : One or more input fields have invalid/empty data
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /questionManager/createQuestion
+       Parameters = {questionTitle=[], questionText=[Sample text], questionType=[1], optionText=[], optionValue=[], _csrf=[b734d306-0e42-4fc9-bd5e-491bb60c5ffb]}
+          Headers = []
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionManagerController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionManagerController#saveQuestion(Model, String, String, String, List, List)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/createQuestion
+             View = null
+        Attribute = invalidData
+            value = One or more fields have invalid/empty data! Please enter and try again
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:&quot;en&quot;, Content-Type:&quot;text/html;charset=UTF-8&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = text/html;charset=UTF-8
+             Body = &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
+    &lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;
+
+    &lt;link href=&quot;favicon.ico&quot; rel=&quot;icon&quot;/&gt;
+    &lt;title&gt;Instructor Create Question&lt;/title&gt;
+    &lt;link
+            crossorigin=&quot;anonymous&quot;
+            href=&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;
+            integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot;
+            rel=&quot;stylesheet&quot;/&gt;
+
+    &lt;style&gt;
+	hr {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		border-top: 3px solid #2e6da4;
+	}
+	textarea {
+		resize: vertical;
+	}
+
+    &lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body style=&quot;background-color: #e7ebee&quot;&gt;
+&lt;div class=&quot;container&quot; style=&quot;padding: 10px;&quot;&gt;
+    &lt;div&gt;
+        &lt;p&gt;You have not yet logged in to the application. Please login to
+            continue...&lt;/p&gt;
+        &lt;a href=&quot;/login&quot;&gt;Click here to log in!&lt;/a&gt;
+    &lt;/div&gt;
+
+    
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;script&gt;
+	document
+			.getElementById('questionType')
+			.addEventListener(
+					'change',
+					function(e) {
+						if (this.value == 2 || this.value == 3) {
+							document.getElementById(&quot;choices&quot;).style.display = &quot;block&quot;;
+							document.getElementById(&quot;addMoreBtn&quot;).style.display = &quot;block&quot;;
+						} else {
+							document.getElementById(&quot;choices&quot;).style.display = &quot;none&quot;;
+							document.getElementById(&quot;addMoreBtn&quot;).style.display = &quot;none&quot;;
+							document.getElementById(&quot;addedChoices&quot;).innerHTML = '';
+							document.getElementById(&quot;addedChoices&quot;).style.display = &quot;none&quot;;
+						}
+					});
+
+	function showMoreOptions() {
+		document.getElementById(&quot;addedChoices&quot;).style.display = &quot;block&quot;;
+		document.getElementById(&quot;addedChoices&quot;).innerHTML += &quot;&lt;br /&gt;&lt;div class='row' style='margin-left: -30px'&gt;&quot;
+				+ &quot;&lt;div class='col-xs-6' style='width: 35%;'&gt;&lt;label for='questionTitle'&gt;Enter the option displayed as&quot;
+				+ &quot; here&lt;/label&gt; &lt;input type='text' name='optionText'&quot;
+				+ &quot;placeholder='Option display text' class='form-control'/&gt;&quot;
+				+ &quot;&lt;span class='glyphicon form-control-feedback' aria-hidden='true'&gt;&lt;/span&gt;&lt;/div&gt;&quot;
+				+ &quot;&lt;div class='col-xs-6' style='width: 35%;'&gt;&lt;label for='questionTitle'&gt;Enter the option stored as&quot;
+				+ &quot; here&lt;/label&gt; &lt;input type='text' name='optionValue'&quot;
+				+ &quot;placeholder='Option stored as value' class='form-control'&quot;
+				+ &quot; /&gt; &lt;span class='glyphicon form-control-feedback'&quot;
+				+ &quot;aria-hidden='true'&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&quot;;
+	}
+
+&lt;/script&gt;
+&lt;/html&gt;
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:28.171  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Deleting the question created by the instructor from the database
+2020-07-16 13:40:28.171  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the deleteQuestion repository function to delete the question1from the Database
+2020-07-16 13:40:28.171  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : The Question 1 is successfully deleted!
+2020-07-16 13:40:28.171  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Redirecting to the instructor's question list page
+2020-07-16 13:40:28.171  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getQuestionListForInstructor repository function to fetch the question bank from the Database by email id anonymousUser
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/deleteQuestion
+       Parameters = {questionId=[1]}
+          Headers = []
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@3f4a7d92}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionManagerController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionManagerController#deleteQuestion(long, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/questionManager
+             View = null
+        Attribute = successMessage
+            value = The question 1 is successfully deleted!
+        Attribute = questionList
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:&quot;en&quot;, Content-Type:&quot;text/html;charset=UTF-8&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = text/html;charset=UTF-8
+             Body = &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
+    &lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;
+    &lt;link href=&quot;favicon.ico&quot; rel=&quot;icon&quot;/&gt;
+    &lt;title&gt;Instructor Question Manager&lt;/title&gt;
+    &lt;link
+            crossorigin=&quot;anonymous&quot;
+            href=&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;
+            integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot;
+            rel=&quot;stylesheet&quot;/&gt;
+
+&lt;/head&gt;
+&lt;body style=&quot;background-color: #e7ebee&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div&gt;
+        &lt;p&gt;You have not yet logged in to the application. Please login to
+            continue...&lt;/p&gt;
+        &lt;a href=&quot;/login&quot;&gt;Click here to log in!&lt;/a&gt;
+    &lt;/div&gt;
+
+    
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:28.175  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Deleting the question created by the instructor from the database
+2020-07-16 13:40:28.175  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the deleteQuestion repository function to delete the question1from the Database
+2020-07-16 13:40:28.175  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : The question could not be deleted
+2020-07-16 13:40:28.175  INFO 41246 --- [    Test worker] C.G.Question.QuestionManagerController   : Redirecting to the instructor's question list page
+2020-07-16 13:40:28.175  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Calling the getQuestionListForInstructor repository function to fetch the question bank from the Database by email id anonymousUser
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/deleteQuestion
+       Parameters = {questionId=[1]}
+          Headers = []
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@24a646c2}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionManagerController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionManagerController#deleteQuestion(long, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/questionManager
+             View = null
+        Attribute = failureMessage
+            value = The question can not not be deleted.
+        Attribute = questionList
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:&quot;en&quot;, Content-Type:&quot;text/html;charset=UTF-8&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = text/html;charset=UTF-8
+             Body = &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
+    &lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;
+    &lt;link href=&quot;favicon.ico&quot; rel=&quot;icon&quot;/&gt;
+    &lt;title&gt;Instructor Question Manager&lt;/title&gt;
+    &lt;link
+            crossorigin=&quot;anonymous&quot;
+            href=&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;
+            integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot;
+            rel=&quot;stylesheet&quot;/&gt;
+
+&lt;/head&gt;
+&lt;body style=&quot;background-color: #e7ebee&quot;&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div&gt;
+        &lt;p&gt;You have not yet logged in to the application. Please login to
+            continue...&lt;/p&gt;
+        &lt;a href=&quot;/login&quot;&gt;Click here to log in!&lt;/a&gt;
+    &lt;/div&gt;
+
+    
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /questionManager/createQuestion
+       Parameters = {}
+          Headers = []
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@3fe3c381}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Question.QuestionManagerController
+           Method = CSCI5308.GroupFormationTool.Question.QuestionManagerController#createQuestion(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = question/createQuestion
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:&quot;en&quot;, Content-Type:&quot;text/html;charset=UTF-8&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = text/html;charset=UTF-8
+             Body = &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
+    &lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;
+
+    &lt;link href=&quot;favicon.ico&quot; rel=&quot;icon&quot;/&gt;
+    &lt;title&gt;Instructor Create Question&lt;/title&gt;
+    &lt;link
+            crossorigin=&quot;anonymous&quot;
+            href=&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;
+            integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot;
+            rel=&quot;stylesheet&quot;/&gt;
+
+    &lt;style&gt;
+	hr {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		border-top: 3px solid #2e6da4;
+	}
+	textarea {
+		resize: vertical;
+	}
+
+    &lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body style=&quot;background-color: #e7ebee&quot;&gt;
+&lt;div class=&quot;container&quot; style=&quot;padding: 10px;&quot;&gt;
+    &lt;div&gt;
+        &lt;p&gt;You have not yet logged in to the application. Please login to
+            continue...&lt;/p&gt;
+        &lt;a href=&quot;/login&quot;&gt;Click here to log in!&lt;/a&gt;
+    &lt;/div&gt;
+
+    
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;script&gt;
+	document
+			.getElementById('questionType')
+			.addEventListener(
+					'change',
+					function(e) {
+						if (this.value == 2 || this.value == 3) {
+							document.getElementById(&quot;choices&quot;).style.display = &quot;block&quot;;
+							document.getElementById(&quot;addMoreBtn&quot;).style.display = &quot;block&quot;;
+						} else {
+							document.getElementById(&quot;choices&quot;).style.display = &quot;none&quot;;
+							document.getElementById(&quot;addMoreBtn&quot;).style.display = &quot;none&quot;;
+							document.getElementById(&quot;addedChoices&quot;).innerHTML = '';
+							document.getElementById(&quot;addedChoices&quot;).style.display = &quot;none&quot;;
+						}
+					});
+
+	function showMoreOptions() {
+		document.getElementById(&quot;addedChoices&quot;).style.display = &quot;block&quot;;
+		document.getElementById(&quot;addedChoices&quot;).innerHTML += &quot;&lt;br /&gt;&lt;div class='row' style='margin-left: -30px'&gt;&quot;
+				+ &quot;&lt;div class='col-xs-6' style='width: 35%;'&gt;&lt;label for='questionTitle'&gt;Enter the option displayed as&quot;
+				+ &quot; here&lt;/label&gt; &lt;input type='text' name='optionText'&quot;
+				+ &quot;placeholder='Option display text' class='form-control'/&gt;&quot;
+				+ &quot;&lt;span class='glyphicon form-control-feedback' aria-hidden='true'&gt;&lt;/span&gt;&lt;/div&gt;&quot;
+				+ &quot;&lt;div class='col-xs-6' style='width: 35%;'&gt;&lt;label for='questionTitle'&gt;Enter the option stored as&quot;
+				+ &quot; here&lt;/label&gt; &lt;input type='text' name='optionValue'&quot;
+				+ &quot;placeholder='Option stored as value' class='form-control'&quot;
+				+ &quot; /&gt; &lt;span class='glyphicon form-control-feedback'&quot;
+				+ &quot;aria-hidden='true'&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&quot;;
+	}
+
+&lt;/script&gt;
+&lt;/html&gt;
+
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.3</a> at Jul. 16, 2020, 1:40:29 p.m.</p>
+</div>
+</div>
+</body>
+</html>

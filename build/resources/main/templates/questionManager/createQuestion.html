@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="icon" href="favicon.ico"/>
+    <title>Instructor Create Question</title>
+    <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous"/>
+
+    <style>
+	hr {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+		border-top: 3px solid #2e6da4;
+	}
+	textarea {
+		resize: vertical;
+	}
+    </style>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container" style="padding: 10px;">
+    <div sec:authorize="!isAuthenticated()">
+        <!-- Send them to login. -->
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+
+        <div th:if="${errorMsg}"
+             class="validation-message alert alert-danger" role="alert"
+             th:text="${errorMsg}"></div>
+
+        <div th:if="${invalidData}"
+             class="validation-message alert alert-danger" role="alert"
+             th:text="${invalidData}"></div>
+
+        <h3 class="text-center">Create Question</h3>
+
+        <br/>
+        <div class="text-right">
+            <a th:href="@{/questionManager/questionManager}"
+               class="btn btn-primary btn-md">Cancel </a>
+        </div>
+        <hr/>
+
+        <form action="#" id="createQuestionForm"
+              th:action="@{/questionManager/createQuestion}" method="post"
+              role="form" data-toggle="validator">
+
+            <div class="form-group input-group has-feedback" style="width: 70%;">
+                <label for="questionTitle">Enter the Question Title here</label> <input
+                    type="text" id="questionTitle" name="questionTitle"
+                    placeholder="Question Title" class="form-control" required/> <span
+                    class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            </div>
+
+            <div class="form-group input-group has-feedback" style="width: 70%;">
+                <label for="questionText">Enter the Question Text here</label>
+                <textarea name="questionText" id="questionText" rows="4"
+                          placeholder="Question Text" class="form-control" required></textarea>
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+            </div>
+
+
+            <div class="form-group input-group has-feedback" style="width: 70%;">
+                <label for="questionType">Select Question Type</label> <select
+                    class="form-control" id="questionType" name="questionType">
+                <option value=1 selected>Numeric</option>
+                <option value=2>Multiple Choice - Select One</option>
+                <option value=3>Multiple Choice - Select Multiple</option>
+                <option value=4>Free Text</option>
+            </select>
+            </div>
+
+            <br/>
+            <div id="choices" class="container" style="display: none;">
+
+                <div class="row" style="margin-left: -30px">
+                    <div class="col-xs-6" style="width: 35%;">
+                        <label for="questionTitle">Enter the option displayed as
+                            here</label> <input type="text" name="optionText"
+                                                placeholder="Option display text" class="form-control"/> <span
+                            class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="col-xs-6" style="width: 35%;">
+                        <label for="questionTitle">Enter the option stored as
+                            here</label> <input type="text" name="optionValue"
+                                                placeholder="Option stored as value" class="form-control"/> <span
+                            class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    </div>
+
+                </div>
+                <br/>
+                <div class="row" style="margin-left: -30px">
+                    <div class="col-xs-6" style="width: 35%;">
+                        <label for="questionTitle">Enter the option displayed as
+                            here</label> <input type="text" name="optionText"
+                                                placeholder="Option display text" class="form-control"/> <span
+                            class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="col-xs-6" style="width: 35%;">
+                        <label for="questionTitle">Enter the option stored as
+                            here</label> <input type="text" name="optionValue"
+                                                placeholder="Option stored as value" class="form-control"/> <span
+                            class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="addedChoices" class="container" style="display: none"></div>
+            <div class="row" id="addMoreBtn" style="display: none">
+                <div class="text-right">
+                    <button type="button" onclick="showMoreOptions()" style="right: 0"
+                            class="btn btn-primary btn-md">
+                        <span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Add
+                        More Options
+                    </button>
+                </div>
+            </div>
+            <hr/>
+            <div class="text-right">
+                <button type="submit" style="right: 0"
+                        class="btn btn-primary btn-md">Save Question
+                </button>
+            </div>
+        </form>
+        <br/>
+        <div class="text-center">
+            <a th:href="@{/questionManager/questionManager}"
+               class="btn btn-primary btn-md"> <span
+                    class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp; Back to
+                Question List
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+	document
+			.getElementById('questionType')
+			.addEventListener(
+					'change',
+					function(e) {
+						if (this.value == 2 || this.value == 3) {
+							document.getElementById("choices").style.display = "block";
+							document.getElementById("addMoreBtn").style.display = "block";
+						} else {
+							document.getElementById("choices").style.display = "none";
+							document.getElementById("addMoreBtn").style.display = "none";
+							document.getElementById("addedChoices").innerHTML = '';
+							document.getElementById("addedChoices").style.display = "none";
+						}
+					});
+
+	function showMoreOptions() {
+		document.getElementById("addedChoices").style.display = "block";
+		document.getElementById("addedChoices").innerHTML += "<br /><div class='row' style='margin-left: -30px'>"
+				+ "<div class='col-xs-6' style='width: 35%;'><label for='questionTitle'>Enter the option displayed as"
+				+ " here</label> <input type='text' name='optionText'"
+				+ "placeholder='Option display text' class='form-control'/>"
+				+ "<span class='glyphicon form-control-feedback' aria-hidden='true'></span></div>"
+				+ "<div class='col-xs-6' style='width: 35%;'><label for='questionTitle'>Enter the option stored as"
+				+ " here</label> <input type='text' name='optionValue'"
+				+ "placeholder='Option stored as value' class='form-control'"
+				+ " /> <span class='glyphicon form-control-feedback'"
+				+ "aria-hidden='true'></span></div></div>";
+	}
+</script>
+</html>

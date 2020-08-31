@@ -1,0 +1,1758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Course.CourseControllerTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:25" hostname="Prabhjots-MacBook-Pro.local" time="0.191">
+  <properties/>
+  <testcase name="addCourseTest()" classname="CSCI5308.GroupFormationTool.Course.CourseControllerTest" time="0.05"/>
+  <testcase name="uploadCSVFileTest()" classname="CSCI5308.GroupFormationTool.Course.CourseControllerTest" time="0.007"/>
+  <testcase name="courseDetailsTest()" classname="CSCI5308.GroupFormationTool.Course.CourseControllerTest" time="0.041"/>
+  <testcase name="enrollTATest()" classname="CSCI5308.GroupFormationTool.Course.CourseControllerTest" time="0.02"/>
+  <testcase name="allCoursesTest()" classname="CSCI5308.GroupFormationTool.Course.CourseControllerTest" time="0.005"/>
+  <testcase name="addTATest()" classname="CSCI5308.GroupFormationTool.Course.CourseControllerTest" time="0.013"/>
+  <testcase name="courseListTest()" classname="CSCI5308.GroupFormationTool.Course.CourseControllerTest" time="0.03"/>
+  <testcase name="deleteCourseTest()" classname="CSCI5308.GroupFormationTool.Course.CourseControllerTest" time="0.015"/>
+  <testcase name="addCourseFormTest()" classname="CSCI5308.GroupFormationTool.Course.CourseControllerTest" time="0.006"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.7.RELEASE)
+
+2020-07-16 13:40:25.552  INFO 41246 --- [    Test worker] C.G.Course.CourseControllerTest          : Starting CourseControllerTest on Prabhjots-MacBook-Pro.local with PID 41246 (started by prabhjotkaur in /Users/prabhjotkaur/git/group22)
+2020-07-16 13:40:25.552  INFO 41246 --- [    Test worker] C.G.Course.CourseControllerTest          : No active profile set, falling back to default profiles: default
+2020-07-16 13:40:25.952  INFO 41246 --- [    Test worker] C.G.Course.CourseControllerTest          : Started CourseControllerTest in 0.411 seconds (JVM running for 5.688)
+2020-07-16 13:40:25.976  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Creating a new course and storing it in the database
+2020-07-16 13:40:25.976  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the courseRepository function to get all courses
+2020-07-16 13:40:25.976  WARN 41246 --- [    Test worker] C.G.Course.CourseController              : Course is not added successfully
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /admin/addCourse
+       Parameters = {_csrf=[9d7fb558-4098-4ed1-bafe-ecf2f10fa7aa]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#addCourse(Course, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/allCourses
+             View = null
+        Attribute = course
+            value = CSCI5308.GroupFormationTool.Course.Course@6fd91775
+           errors = []
+        Attribute = failureMessage
+            value = The course could not be added since the course already exists!
+        Attribute = courses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Admin Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:25.999  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Creating a new course and storing it in the database
+2020-07-16 13:40:26.000  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the courseRepository function to get all courses
+2020-07-16 13:40:26.000  WARN 41246 --- [    Test worker] C.G.Course.CourseController              : Course is not added successfully
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /admin/addCourse
+       Parameters = {_csrf=[c74a25df-d510-462e-b07d-312719c82556]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#addCourse(Course, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/allCourses
+             View = null
+        Attribute = course
+            value = CSCI5308.GroupFormationTool.Course.Course@402f2124
+           errors = []
+        Attribute = failureMessage
+            value = The course could not be added since the course already exists!
+        Attribute = courses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Admin Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /uploadCSVFile
+       Parameters = {courseId=[CSCI5308]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@3edc01a3}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#uploadCSVFile(String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/uploadCSVFile
+             View = null
+        Attribute = CourseId
+            value = CSCI5308
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.017  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the role of a user by email Id
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /courseDetails
+       Parameters = {courseId=[CSCI5308], courseName=[ASDC]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@54a9dc25}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#courseDetail(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/courseDetails
+             View = null
+        Attribute = courseName
+            value = ASDC
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Course Details</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <h3 class="text-center">Course Details</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Course Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>ASDC</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.025  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the role of a user by email Id
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /courseDetails
+       Parameters = {courseId=[CSCI5308], courseName=[ASDC]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@542febf3}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#courseDetail(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/courseDetails
+             View = null
+        Attribute = courseName
+            value = ASDC
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Course Details</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <h3 class="text-center">Course Details</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Course Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>ASDC</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.029  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the role of a user by email Id
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /courseDetails
+       Parameters = {courseId=[CSCI5308], courseName=[ASDC]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@5757c2bd}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#courseDetail(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/courseDetails
+             View = null
+        Attribute = courseName
+            value = ASDC
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Course Details</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <h3 class="text-center">Course Details</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Course Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>ASDC</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.042  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the role of a user by email Id
+2020-07-16 13:40:26.043  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Checks if the survey is published for a course CSCI5308
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /courseDetails
+       Parameters = {courseId=[CSCI5308], courseName=[ASDC]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@35e0a112}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#courseDetail(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/courseSurveyHome
+             View = null
+        Attribute = surveyPublished
+            value = null
+        Attribute = courseName
+            value = ASDC
+        Attribute = courseId
+            value = CSCI5308
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Course Details</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+    <style>
+h4 {
+	display: inline;
+}
+
+    </style>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <h3 class="text-center">Course Details</h3>
+    <h4>Course :</h4>
+    <h4>ASDC</h4>
+    
+    <div>
+        <br/>
+        <h4>
+            Survey has not been published yet! Please check again in few days. <br/>
+            <br/> <a class="btn btn-primary btn-md" href="/courseList">Go
+            back to course list</a>
+        </h4>
+    </div>
+
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.049  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the role of a user by email Id
+2020-07-16 13:40:26.050  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Checks if the survey is published for a course CSCI5308
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /courseDetails
+       Parameters = {courseId=[CSCI5308], courseName=[ASDC]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@3949f452}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#courseDetail(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/courseSurveyHome
+             View = null
+        Attribute = surveyPublished
+            value = null
+        Attribute = courseName
+            value = ASDC
+        Attribute = courseId
+            value = CSCI5308
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Course Details</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+    <style>
+h4 {
+	display: inline;
+}
+
+    </style>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <h3 class="text-center">Course Details</h3>
+    <h4>Course :</h4>
+    <h4>ASDC</h4>
+    
+    <div>
+        <br/>
+        <h4>
+            Survey has not been published yet! Please check again in few days. <br/>
+            <br/> <a class="btn btn-primary btn-md" href="/courseList">Go
+            back to course list</a>
+        </h4>
+    </div>
+
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.055  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Fetch TA for a course using course Id CSCI5308
+2020-07-16 13:40:26.055  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to get TA for a course using course Id
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /enrollTA
+       Parameters = {courseId=[CSCI5308]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@7ace7488}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#enrollTA(String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/enrollTA
+             View = null
+        Attribute = user
+            value = CSCI5308.GroupFormationTool.User.User@24a3a558
+           errors = []
+        Attribute = taList
+            value = []
+        Attribute = courseId
+            value = CSCI5308
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Enroll TA</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container" style="padding:20px;">
+    <form action="/enrollTA?courseId=CSCI5308" autocomplete="off"
+          class="m-t col-md-4 col-md-offset-4"
+          data-toggle="validator" method="post" role="form"><input type="hidden" name="_csrf" value="d6d624e9-2b18-47c2-869c-52d7020c4577"/>
+        
+        
+        <br>
+        <h4>Enter details to add TA!</h4>
+        <div class="form-group input-group has-feedback">
+            <input class="form-control" name="emailId" placeholder="Add by Email Address"
+                   required type="email" id="emailId" value=""/>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary btn-sm btn-block" style="width: 120px; margin-left: 40px;"
+                    type="submit">Add TA
+            </button>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <h3 class="text-center">Enrolled TA(s)</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">BannerID</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+    <br/>
+    <div>
+        <a class="text-primary" href="/courseList">Go back to
+            course page!</a>
+    </div>
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.078  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Function call to fetch all the courses details
+2020-07-16 13:40:26.078  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the courseRepository function to get all courses
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /admin/allAdminCourses
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@49641c1d}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#allCourses(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/allCourses
+             View = null
+        Attribute = courses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Admin Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.085  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Enroll a TA for the course CSCI5308
+2020-07-16 13:40:26.085  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to enroll a TA for the course using email id
+2020-07-16 13:40:26.085  WARN 41246 --- [    Test worker] C.G.Course.CourseController              : TA is not successfully added to the course
+2020-07-16 13:40:26.085  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to get TA for a course using course Id
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /enrollTA
+       Parameters = {courseId=[CSCI5308], _csrf=[4e88607b-f753-48e9-8376-032d5a199ebb]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#addTA(String, User, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/enrollTA
+             View = null
+        Attribute = user
+            value = CSCI5308.GroupFormationTool.User.User@12884dcb
+           errors = []
+        Attribute = error
+            value = not added
+        Attribute = taList
+            value = []
+        Attribute = courseId
+            value = CSCI5308
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Enroll TA</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container" style="padding:20px;">
+    <form action="/enrollTA?courseId=CSCI5308" autocomplete="off"
+          class="m-t col-md-4 col-md-offset-4"
+          data-toggle="validator" method="post" role="form"><input type="hidden" name="_csrf" value="4e88607b-f753-48e9-8376-032d5a199ebb"/>
+        <div class="validation-message alert alert-danger" role="alert">TA not added!!
+        </div>
+        
+        <br>
+        <h4>Enter details to add TA!</h4>
+        <div class="form-group input-group has-feedback">
+            <input class="form-control" name="emailId" placeholder="Add by Email Address"
+                   required type="email" id="emailId" value=""/>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary btn-sm btn-block" style="width: 120px; margin-left: 40px;"
+                    type="submit">Add TA
+            </button>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <h3 class="text-center">Enrolled TA(s)</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">BannerID</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+    <br/>
+    <div>
+        <a class="text-primary" href="/courseList">Go back to
+            course page!</a>
+    </div>
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.090  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Enroll a TA for the course CSCI5308
+2020-07-16 13:40:26.090  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to enroll a TA for the course using email id
+2020-07-16 13:40:26.090  WARN 41246 --- [    Test worker] C.G.Course.CourseController              : TA is not successfully added to the course
+2020-07-16 13:40:26.090  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to get TA for a course using course Id
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /enrollTA
+       Parameters = {courseId=[CSCI5308], _csrf=[8e69b4d4-382f-4b96-9cf6-b10f6d25bebb]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#addTA(String, User, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/enrollTA
+             View = null
+        Attribute = user
+            value = CSCI5308.GroupFormationTool.User.User@69de09d2
+           errors = []
+        Attribute = error
+            value = not added
+        Attribute = taList
+            value = []
+        Attribute = courseId
+            value = CSCI5308
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Enroll TA</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container" style="padding:20px;">
+    <form action="/enrollTA?courseId=CSCI5308" autocomplete="off"
+          class="m-t col-md-4 col-md-offset-4"
+          data-toggle="validator" method="post" role="form"><input type="hidden" name="_csrf" value="8e69b4d4-382f-4b96-9cf6-b10f6d25bebb"/>
+        <div class="validation-message alert alert-danger" role="alert">TA not added!!
+        </div>
+        
+        <br>
+        <h4>Enter details to add TA!</h4>
+        <div class="form-group input-group has-feedback">
+            <input class="form-control" name="emailId" placeholder="Add by Email Address"
+                   required type="email" id="emailId" value=""/>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary btn-sm btn-block" style="width: 120px; margin-left: 40px;"
+                    type="submit">Add TA
+            </button>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <h3 class="text-center">Enrolled TA(s)</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">BannerID</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+    <br/>
+    <div>
+        <a class="text-primary" href="/courseList">Go back to
+            course page!</a>
+    </div>
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.097  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Condition check if current user is admin or not
+2020-07-16 13:40:26.097  INFO 41246 --- [    Test worker] CSCI5308.GroupFormationTool.User.User    : Checking if current user is admin
+2020-07-16 13:40:26.097  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the courseRepository function to get all courses
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /courseList
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@7a678c0f}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#courseList(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/allCourses
+             View = null
+        Attribute = courses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Admin Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.101  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Condition check if current user is admin or not
+2020-07-16 13:40:26.101  INFO 41246 --- [    Test worker] CSCI5308.GroupFormationTool.User.User    : Checking if current user is admin
+2020-07-16 13:40:26.101  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Fetch user role based on th email Id
+2020-07-16 13:40:26.101  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the role of a user by email Id
+2020-07-16 13:40:26.101  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : User is a Guest User
+2020-07-16 13:40:26.101  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Function call to fetch all courses details for a guest user
+2020-07-16 13:40:26.101  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the courseRepository function to get all courses
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /courseList
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@67da7f13}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#courseList(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/guestCourses
+             View = null
+        Attribute = courses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Guest Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.107  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Condition check if current user is admin or not
+2020-07-16 13:40:26.107  INFO 41246 --- [    Test worker] CSCI5308.GroupFormationTool.User.User    : Checking if current user is admin
+2020-07-16 13:40:26.107  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Fetch user role based on th email Id
+2020-07-16 13:40:26.108  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the role of a user by email Id
+2020-07-16 13:40:26.108  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : User is a Student
+2020-07-16 13:40:26.108  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Function call to fetch enrolled courses for a student by emailId anonymousUser
+2020-07-16 13:40:26.108  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the courses enrolled by a student using student's email Id
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /courseList
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@4faaa08f}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#courseList(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/studentCourses
+             View = null
+        Attribute = courses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Student Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <br/>
+    <br/>
+    <div>
+        <form method="post" action="/logout"><input type="hidden" name="_csrf" value="7b4cf45f-7b03-4481-b921-7b7395923055"/>
+            <button class="btn btn-danger btn-sm" type="submit">
+                Sign Out
+            </button>
+        </form>
+    </div>
+    <h3 class="text-center">Registered Courses</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Course Id</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Course Details</th>
+                <th scope="col">Course Credits</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.113  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Condition check if current user is admin or not
+2020-07-16 13:40:26.113  INFO 41246 --- [    Test worker] CSCI5308.GroupFormationTool.User.User    : Checking if current user is admin
+2020-07-16 13:40:26.114  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Fetch user role based on th email Id
+2020-07-16 13:40:26.114  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the role of a user by email Id
+2020-07-16 13:40:26.114  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : User is a TA
+2020-07-16 13:40:26.114  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Function call to get TA courses by emailId anonymousUser
+2020-07-16 13:40:26.114  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the courses for a TA using email Id
+2020-07-16 13:40:26.114  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Function call to fetch student courses by emailId anonymousUser
+2020-07-16 13:40:26.114  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the courses enrolled by a student using student's email Id
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /courseList
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@10cc577b}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#courseList(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/taCourses
+             View = null
+        Attribute = studentCourses
+            value = []
+        Attribute = taCourses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>TA Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <h3 class="text-center">Registered Courses(Student)</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Course Id</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Course Details</th>
+                <th scope="col">Course Credits</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+    <div></div>
+</div>
+<div class="container">
+    <h3 class="text-center">Registered Courses(TA)</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Course Id</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Course Details</th>
+                <th scope="col">Course Credits</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.119  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Condition check if current user is admin or not
+2020-07-16 13:40:26.119  INFO 41246 --- [    Test worker] CSCI5308.GroupFormationTool.User.User    : Checking if current user is admin
+2020-07-16 13:40:26.119  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Fetch user role based on th email Id
+2020-07-16 13:40:26.119  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Get the role of a user by email Id
+2020-07-16 13:40:26.119  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : User is an Instructor and get instructor courses by emailid anonymousUser
+2020-07-16 13:40:26.120  INFO 41246 --- [    Test worker] C.GroupFormationTool.Question.Question   : Function call to get instructors for a course using email Id
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /courseList
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@4d44a0e9}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#courseList(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/instructorCourses
+             View = null
+        Attribute = courses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.127  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Function call to delete a course with id CSCI5308
+2020-07-16 13:40:26.127  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the deleteCourse repository function to delete the courseCSCI5308from the Database
+2020-07-16 13:40:26.127  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the courseRepository function to get all courses
+2020-07-16 13:40:26.127  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Course CSCI5308 is deleted successfully
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /admin/deleteCourse
+       Parameters = {id=[CSCI5308], _csrf=[42f80b59-48ba-43a8-88d5-696c180ae6ea]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#deleteCourse(String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/allCourses
+             View = null
+        Attribute = successMessage
+            value = The course was successfully deleted!
+        Attribute = courses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Admin Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.130  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Function call to delete a course with id CSCI5308
+2020-07-16 13:40:26.130  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the deleteCourse repository function to delete the courseCSCI5308from the Database
+2020-07-16 13:40:26.130  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the courseRepository function to get all courses
+2020-07-16 13:40:26.131  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Course is not deleted successfully
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /admin/deleteCourse
+       Parameters = {id=[CSCI5308], _csrf=[9f21d408-7725-4b6b-ae71-33116924746e]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#deleteCourse(String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/allCourses
+             View = null
+        Attribute = failureMessage
+            value = The course could not be deleted since the course is used by a student/TA/instructor.
+        Attribute = courses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Admin Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.133  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Function call to delete a course with id CSCI5308
+2020-07-16 13:40:26.133  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the deleteCourse repository function to delete the courseCSCI5308from the Database
+2020-07-16 13:40:26.133  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the courseRepository function to get all courses
+2020-07-16 13:40:26.134  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Course CSCI5308 is deleted successfully
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /admin/deleteCourse
+       Parameters = {id=[CSCI5308]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@79d26cb5}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#deleteCourse(String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/allCourses
+             View = null
+        Attribute = successMessage
+            value = The course was successfully deleted!
+        Attribute = courses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Admin Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2020-07-16 13:40:26.136  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Function call to delete a course with id CSCI5308
+2020-07-16 13:40:26.136  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the deleteCourse repository function to delete the courseCSCI5308from the Database
+2020-07-16 13:40:26.136  INFO 41246 --- [    Test worker] C.GroupFormationTool.Course.Course       : Calling the courseRepository function to get all courses
+2020-07-16 13:40:26.137  INFO 41246 --- [    Test worker] C.G.Course.CourseController              : Course is not deleted successfully
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /admin/deleteCourse
+       Parameters = {id=[CSCI5308]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@636605d8}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#deleteCourse(String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/allCourses
+             View = null
+        Attribute = failureMessage
+            value = The course could not be deleted since the course is used by a student/TA/instructor.
+        Attribute = courses
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Admin Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /admin/addCourse
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@1163e140}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.CourseController
+           Method = CSCI5308.GroupFormationTool.Course.CourseController#addCourseForm(Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/addCourse
+             View = null
+        Attribute = course
+            value = CSCI5308.GroupFormationTool.Course.Course@7948586d
+           errors = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Admin Add Course</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="flex align-items-center text-center">
+    <div>
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+
+    
+</div>
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

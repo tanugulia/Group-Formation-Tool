@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org"
+>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>TA Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <h3 class="text-center">Registered Courses(Student)</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Course Id</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Course Details</th>
+                <th scope="col">Course Credits</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="course : ${studentCourses}">
+                <td th:text="${course.id}"></td>
+                <td><a th:href="@{/courseDetails?courseName={courseName} (courseName=${course.name})}"
+                       th:text="${course.name}">
+                </a></td>
+                <td th:text="${course.description}"></td>
+                <td th:text="${course.credits}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div></div>
+</div>
+<div class="container">
+    <h3 class="text-center">Registered Courses(TA)</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Course Id</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Course Details</th>
+                <th scope="col">Course Credits</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="course : ${taCourses}">
+                <td th:text="${course.id}"></td>
+                <td><a th:href="@{/taCourseDetails(courseName=${course.name},courseId=${course.id})}"
+                       th:text="${course.name}">
+                </a></td>
+                <td th:text="${course.description}"></td>
+                <td th:text="${course.credits}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

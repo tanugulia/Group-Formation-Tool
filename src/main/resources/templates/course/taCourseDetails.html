@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.w3.org/1999/xhtml"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>TA Course Details</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div sec:authorize="!isAuthenticated()">
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+    <div sec:authorize="isAuthenticated()">
+        <h3 class="text-center">Course Details</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Course Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td th:text="${courseName}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <br/>
+        <div class="text-center" th:if="${!published and created ==-1}">
+            <a class="btn btn-primary btn-md"
+               th:href="@{/survey/createSurvey(courseId=${courseId},courseName=${courseName})}">Create your Course Survey
+            </a>
+        </div>
+        <div class="text-center" th:if="${!published and created !=-1}">
+            <a class="btn btn-primary btn-md"
+               th:href="@{/survey/createSurvey(courseId=${courseId},courseName=${courseName})}">Edit your Course Survey
+            </a>
+        </div>
+        <br/>
+        <div class="text-center">
+            <a th:href="@{/courseList}">
+                <button class="btn btn-success btn-sm" type="submit">Back
+                    to your courses
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

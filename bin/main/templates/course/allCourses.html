@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
+      xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Admin Course List</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div sec:authorize="!isAuthenticated()">
+        <p>You have not logged in to the application. Please login to
+            continue...</p>
+        <a th:href="@{/login}">Click here to log in!</a>
+    </div>
+
+    <div sec:authorize="isAuthenticated()">
+
+        <div class="validation-message alert alert-success"
+             role="alert" th:if="${successMessage}"
+             th:text="${successMessage}"></div>
+
+        <div class="validation-message alert alert-danger"
+             role="alert" th:if="${failureMessage}"
+             th:text="${failureMessage}"></div>
+
+        <h1>List of Courses</h1>
+        <a href="/admin/addCourse">Add a new Course</a> <br> <br>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped">
+                <tr>
+                    <th>Course Id</th>
+
+                    <th>Name</th>
+
+                    <th>Credits</th>
+
+                    <th>Course Details</th>
+
+                    <th>Delete Action</th>
+
+                    <th>Add Instructor</th>
+                </tr>
+                <tr th:each="course : ${courses}">
+
+                    <td th:text="*{course.id}">Course Id</td>
+
+                    <td th:text="*{course.name}">Name</td>
+
+                    <td th:text="*{course.credits}">Credits</td>
+
+                    <td th:text="*{course.description}">Course Details</td>
+
+                    <td><a class="text-danger"
+                           th:href="@{/admin/deleteCourse(id=${course.id})}"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Delete</a>
+                    </td>
+
+                    <td><a
+                            class="text-primary"
+                            th:href="@{/admin/assignInstructor(courseId=${course.id}) }"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Add
+                    </a>
+                </tr>
+            </table>
+        </div>
+        <form class="text-center" method="post" th:action="@{/logout}">
+            <button class="btn btn-danger btn-sm" type="submit">
+                Sign Out
+            </button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

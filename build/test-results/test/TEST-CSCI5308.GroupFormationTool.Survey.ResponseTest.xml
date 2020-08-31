@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Survey.ResponseTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:29" hostname="Prabhjots-MacBook-Pro.local" time="0.008">
+  <properties/>
+  <testcase name="getSurveyIdTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="getQuestionTextTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.001"/>
+  <testcase name="setQuestionTitleTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="getQuestionTypeTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="setAnswerTextTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="getOptionIdTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="getQuestionTitleTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.001"/>
+  <testcase name="setSurveyIdTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="getOptionsTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="setOptionIdTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="getAnswerTextTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="getResponseUserTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.001"/>
+  <testcase name="setQuestionIdTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="getUserResponsesTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.001"/>
+  <testcase name="setQuestionTextTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="setQuestionTypeTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.001"/>
+  <testcase name="getUserIdTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="getQuestionIdTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.001"/>
+  <testcase name="setOptionsTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.0"/>
+  <testcase name="storeResponsesTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.001"/>
+  <testcase name="setUserIdTest()" classname="CSCI5308.GroupFormationTool.Survey.ResponseTest" time="0.001"/>
+  <system-out><![CDATA[2020-07-16 13:40:29.777  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Response     : Getting the user details based on responded emailId
+2020-07-16 13:40:29.777  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Response     : Getting the responses of a single users who took the course survey id: 1
+2020-07-16 13:40:29.781  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Response     : Storing the user responses to the database
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

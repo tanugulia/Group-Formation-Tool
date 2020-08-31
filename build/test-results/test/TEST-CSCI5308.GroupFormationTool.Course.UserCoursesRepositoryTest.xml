@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Course.UserCoursesRepositoryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:25" hostname="Prabhjots-MacBook-Pro.local" time="0.011">
+  <properties/>
+  <testcase name="getInstructorCoursesTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesRepositoryTest" time="0.001"/>
+  <testcase name="getStudentCoursesTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesRepositoryTest" time="0.001"/>
+  <testcase name="getTAForCourseTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesRepositoryTest" time="0.001"/>
+  <testcase name="enrollTAForCourseUsingEmailIdTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesRepositoryTest" time="0.002"/>
+  <testcase name="getUserRoleByEmailIdTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesRepositoryTest" time="0.003"/>
+  <testcase name="getTACoursesTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesRepositoryTest" time="0.001"/>
+  <testcase name="getInstructorsForCourseTest()" classname="CSCI5308.GroupFormationTool.Course.UserCoursesRepositoryTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

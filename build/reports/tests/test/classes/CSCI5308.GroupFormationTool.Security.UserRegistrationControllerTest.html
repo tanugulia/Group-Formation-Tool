@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - UserRegistrationControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>UserRegistrationControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/CSCI5308.GroupFormationTool.Security.html">CSCI5308.GroupFormationTool.Security</a> &gt; UserRegistrationControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.025s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">registerTest()</td>
+<td class="success">0.025s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.7.RELEASE)
+
+2020-07-16 13:40:27.339  INFO 41246 --- [    Test worker] C.G.S.UserRegistrationControllerTest     : Starting UserRegistrationControllerTest on Prabhjots-MacBook-Pro.local with PID 41246 (started by prabhjotkaur in /Users/prabhjotkaur/git/group22)
+2020-07-16 13:40:27.339  INFO 41246 --- [    Test worker] C.G.S.UserRegistrationControllerTest     : No active profile set, falling back to default profiles: default
+2020-07-16 13:40:27.661  INFO 41246 --- [    Test worker] C.G.S.UserRegistrationControllerTest     : Started UserRegistrationControllerTest in 0.331 seconds (JVM running for 7.396)
+2020-07-16 13:40:27.666  INFO 41246 --- [    Test worker] C.G.Security.UserRegistrationController  : Fetching the password policies of the system
+2020-07-16 13:40:27.666  INFO 41246 --- [    Test worker] C.GroupFormationTool.Password.Policy     : Calling the Policy Repository to fetch all the password security policies from database
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /register
+       Parameters = {}
+          Headers = []
+             Body = &lt;no character encoding set&gt;
+    Session Attrs = {org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository.CSRF_TOKEN=org.springframework.security.web.csrf.DefaultCsrfToken@41a5e714}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Security.UserRegistrationController
+           Method = CSCI5308.GroupFormationTool.Security.UserRegistrationController#register(User, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = user/signup
+             View = null
+        Attribute = user
+            value = CSCI5308.GroupFormationTool.User.User@1d00e2d1
+           errors = []
+        Attribute = policies
+            value = []
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:&quot;en&quot;, Content-Type:&quot;text/html;charset=UTF-8&quot;, X-Content-Type-Options:&quot;nosniff&quot;, X-XSS-Protection:&quot;1; mode=block&quot;, Cache-Control:&quot;no-cache, no-store, max-age=0, must-revalidate&quot;, Pragma:&quot;no-cache&quot;, Expires:&quot;0&quot;, X-Frame-Options:&quot;DENY&quot;]
+     Content type = text/html;charset=UTF-8
+             Body = &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;meta content=&quot;IE=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;/&gt;
+    &lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;
+    &lt;link href=&quot;favicon.ico&quot; rel=&quot;icon&quot;/&gt;
+    &lt;title&gt;User Registration Page&lt;/title&gt;
+    &lt;link
+            crossorigin=&quot;anonymous&quot;
+            href=&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;
+            integrity=&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot;
+            rel=&quot;stylesheet&quot;/&gt;
+
+&lt;/head&gt;
+&lt;body style=&quot;background-color: #e7ebee&quot;&gt;
+&lt;div class=&quot;flex align-items-center text-center&quot; style=&quot;padding: 20px;&quot;&gt;
+    &lt;br/&gt;
+    &lt;div&gt;
+        &lt;h4&gt;Create Account&lt;/h4&gt;
+        &lt;form action=&quot;/register&quot; autocomplete=&quot;off&quot; class=&quot;m-t col-md-4 col-md-offset-4&quot;
+              data-toggle=&quot;validator&quot; method=&quot;post&quot;
+              role=&quot;form&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;_csrf&quot; value=&quot;74e4f569-2e8f-4ee8-87f9-5597f6681afe&quot;/&gt;
+
+            
+            &lt;br&gt;
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            &lt;div class=&quot;form-group input-group has-feedback&quot;&gt;
+                 &lt;span
+                    class=&quot;input-group-addon&quot;&gt; &lt;span
+                    class=&quot;glyphicon glyphicon-user&quot;&gt;&lt;/span&gt;
+					&lt;/span&gt; &lt;input class=&quot;form-control&quot; placeholder=&quot;First Name&quot;
+                                   required type=&quot;text&quot; id=&quot;firstName&quot; name=&quot;firstName&quot; value=&quot;&quot;/&gt; &lt;span
+                    aria-hidden=&quot;true&quot; class=&quot;glyphicon form-control-feedback&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+
+            &lt;div class=&quot;form-group input-group has-feedback&quot;&gt;
+                 &lt;span
+                    class=&quot;input-group-addon&quot;&gt; &lt;span
+                    class=&quot;glyphicon glyphicon-user&quot;&gt;&lt;/span&gt;
+					&lt;/span&gt; &lt;input class=&quot;form-control&quot; placeholder=&quot;Last Name&quot; required
+                                   type=&quot;text&quot; id=&quot;lastName&quot; name=&quot;lastName&quot; value=&quot;&quot;/&gt; &lt;span
+                    aria-hidden=&quot;true&quot; class=&quot;glyphicon form-control-feedback&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+
+            &lt;div class=&quot;form-group input-group has-feedback&quot;&gt;
+                 &lt;span
+                    class=&quot;input-group-addon&quot;&gt; &lt;span
+                    class=&quot;glyphicon glyphicon-envelope&quot;&gt;&lt;/span&gt;
+					&lt;/span&gt; &lt;input class=&quot;form-control&quot; placeholder=&quot;Email address&quot;
+                                   required type=&quot;email&quot; id=&quot;emailId&quot; name=&quot;emailId&quot; value=&quot;&quot;/&gt; &lt;span
+                    aria-hidden=&quot;true&quot; class=&quot;glyphicon form-control-feedback&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group input-group has-feedback&quot;&gt;
+					&lt;span class=&quot;input-group-addon&quot;&gt; &lt;span
+                            class=&quot;glyphicon glyphicon-file&quot;&gt;&lt;/span&gt;
+					&lt;/span&gt; &lt;input class=&quot;form-control&quot; placeholder=&quot;Banner Id&quot; type=&quot;text&quot; id=&quot;bannerId&quot; name=&quot;bannerId&quot; value=&quot;&quot;/&gt; &lt;span
+                    aria-hidden=&quot;true&quot; class=&quot;glyphicon form-control-feedback&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group input-group has-feedback&quot;&gt;
+                 &lt;span
+                    class=&quot;input-group-addon&quot;&gt; &lt;span
+                    class=&quot;glyphicon glyphicon-lock&quot;&gt;&lt;/span&gt;
+					&lt;/span&gt; &lt;input class=&quot;form-control&quot; placeholder=&quot;Password&quot;
+                                   required type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; value=&quot;&quot;/&gt; &lt;span
+                    aria-hidden=&quot;true&quot; class=&quot;glyphicon form-control-feedback&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;form-group input-group has-feedback&quot;&gt;
+                
+                &lt;span class=&quot;input-group-addon&quot;&gt; &lt;span
+                        class=&quot;glyphicon glyphicon-lock&quot;&gt;&lt;/span&gt;
+					&lt;/span&gt; &lt;input class=&quot;form-control&quot; placeholder=&quot;Confirm Password&quot;
+                                   required type=&quot;password&quot; id=&quot;confirmPassword&quot; name=&quot;confirmPassword&quot; value=&quot;&quot;/&gt; &lt;span
+                    aria-hidden=&quot;true&quot; class=&quot;glyphicon form-control-feedback&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;text-center&quot;&gt;
+                &lt;button class=&quot;btn btn-primary btn-sm btn-block&quot; type=&quot;submit&quot;&gt;Register&lt;/button&gt;
+                &lt;br/&gt;
+                &lt;button class=&quot;btn btn-danger btn-sm btn-block&quot; type=&quot;reset&quot;&gt;Cancel&lt;/button&gt;
+            &lt;/div&gt;
+
+            &lt;br/&gt;
+            &lt;div&gt;
+                &lt;a class=&quot;text-primary&quot; href=&quot;/login&quot;&gt;Are you an existing
+                    user? Click here to log in!&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+        &lt;br/&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.3</a> at Jul. 16, 2020, 1:40:29 p.m.</p>
+</div>
+</div>
+</body>
+</html>

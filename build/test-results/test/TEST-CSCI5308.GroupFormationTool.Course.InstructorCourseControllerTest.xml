@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CSCI5308.GroupFormationTool.Course.InstructorCourseControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-07-16T16:40:25" hostname="Prabhjots-MacBook-Pro.local" time="0.035">
+  <properties/>
+  <testcase name="courseDetailsTest()" classname="CSCI5308.GroupFormationTool.Course.InstructorCourseControllerTest" time="0.035"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.7.RELEASE)
+
+2020-07-16 13:40:25.088  INFO 41246 --- [    Test worker] C.G.C.InstructorCourseControllerTest     : Starting InstructorCourseControllerTest on Prabhjots-MacBook-Pro.local with PID 41246 (started by prabhjotkaur in /Users/prabhjotkaur/git/group22)
+2020-07-16 13:40:25.089  INFO 41246 --- [    Test worker] C.G.C.InstructorCourseControllerTest     : No active profile set, falling back to default profiles: default
+2020-07-16 13:40:25.482  INFO 41246 --- [    Test worker] C.G.C.InstructorCourseControllerTest     : Started InstructorCourseControllerTest in 0.405 seconds (JVM running for 5.218)
+2020-07-16 13:40:25.489  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Checking if instructor has created a survey for the course CSCI3901
+2020-07-16 13:40:25.489  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Getting survey id based on course id CSCI3901
+2020-07-16 13:40:25.489  INFO 41246 --- [    Test worker] C.G.Course.InstructorCourseController    : Checking if instructor has published the survey for the course CSCI3901
+2020-07-16 13:40:25.489  INFO 41246 --- [    Test worker] C.GroupFormationTool.Survey.Survey       : Checking if the survey is published for the course CSCI3901 from the database
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /instructorCourseDetails
+       Parameters = {courseName=[SDC], courseId=[CSCI3901]}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = CSCI5308.GroupFormationTool.Course.InstructorCourseController
+           Method = CSCI5308.GroupFormationTool.Course.InstructorCourseController#courseDetails(String, String, Model)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = course/instructorCourseDetails
+             View = null
+        Attribute = published
+            value = true
+        Attribute = courseId
+            value = CSCI3901
+        Attribute = courseName
+            value = SDC
+        Attribute = created
+            value = 1
+        Attribute = questionError
+            value = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Language:"en", Content-Type:"text/html;charset=UTF-8", X-Content-Type-Options:"nosniff", X-XSS-Protection:"1; mode=block", Cache-Control:"no-cache, no-store, max-age=0, must-revalidate", Pragma:"no-cache", Expires:"0", X-Frame-Options:"DENY"]
+     Content type = text/html;charset=UTF-8
+             Body = <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="favicon.ico" rel="icon"/>
+    <title>Instructor Course Details</title>
+    <link
+            crossorigin="anonymous"
+            href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            rel="stylesheet"/>
+
+</head>
+<body style="background-color: #e7ebee">
+<div class="container">
+    <div>
+        <p>You have not yet logged in to the application. Please login to
+            continue...</p>
+        <a href="/login">Click here to log in!</a>
+    </div>
+    
+</body>
+</html>
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
